@@ -1,15 +1,17 @@
 # **Infra Team Structure**
 
 ```
-Chief Infrastructure & Platform Officer  (CIPO)
+Chief Infrastructure & Platform Officer (CIPO)
 │
 ├─ 1A  Facilities & Physical Infra
 ├─ 1B  Core Cloud Infra & Platform
 ├─ 1C  Platform Engineering & Developer Experience
 ├─ 1D  Data & AI Infrastructure
 ├─ 1E  Security, Privacy & Compliance
-├─ 1F  Reliability & Observability  (SRE Core)
-└─ 1G  FinOps & Capacity Engineering
+├─ 1F  Reliability & Observability (SRE Core)
+├─ 1G  FinOps & Capacity Engineering
+├─ 1H  Product, UX & Customer-Success Division
+└─ 1I  Corporate IT & End-User Services
 ```
 ## **1A – Facilities & Physical Infrastructure**
 
