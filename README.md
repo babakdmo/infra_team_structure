@@ -305,4 +305,136 @@ This updated version of the Data & AI Infrastructure layer introduces a complete
     └─ KPIs:
         └─ Dashboard Latency P95 < 30s
 ```
+## **1E – Security, Privacy & Compliance**
 
+---
+
+## 📌 Organizational Breakdown
+
+| Squad | Sub-Units | Added Responsibilities | KPI / SLO |
+|-------|-----------|-------------------------|-----------|
+| **E-1 Security Engineering** | U-SE1 Red / Blue Team <br> U-SE2 PKI / KMS | SBOM Scanning, FIPS 140-3 compliant token issuance | CVE MTTP < 12 hours |
+| **E-2 IAM / Zero-Trust** | U-IAM1 SSO <br> U-IAM2 SPIFFE / SPIRE | 24h certificate rotation, mTLS everywhere | SSO p95 < 200ms |
+| **E-3 Privacy Engineering** | U-PR1 Differential Privacy <br> U-PR2 Right-to-Erase | Orchestration of Iceberg Row-Level Delete | Privacy P0 = 0 |
+| **E-4 Compliance Operations** | U-CO1 SOC-2 Evidence Collection <br> U-CO2 GDPR Register | “Audit Gate” enforcement in Argo-CD | Audit Pass = 100% |
+
+---
+
+## **1E – Security, Privacy & Compliance Tree**
+
+```
+1E Security, Privacy & Compliance
+│
+├─ E-1 Security Engineering
+│   ├─ U-SE1 Red / Blue Team
+│   ├─ U-SE2 PKI / KMS
+│   ├─ Responsibilities:
+│   │   ├─ SBOM Scan
+│   │   └─ FIPS 140-3 Token Issuance
+│   └─ KPI:
+│       └─ CVE MTTP < 12h
+│
+├─ E-2 IAM / Zero-Trust
+│   ├─ U-IAM1 Single Sign-On (SSO)
+│   ├─ U-IAM2 SPIFFE / SPIRE
+│   ├─ Responsibilities:
+│   │   ├─ Cert Rotation (24h)
+│   │   └─ Enforce mTLS Everywhere
+│   └─ KPI:
+│       └─ SSO p95 < 200ms
+│
+├─ E-3 Privacy Engineering
+│   ├─ U-PR1 Differential Privacy
+│   ├─ U-PR2 Right-to-Erase
+│   ├─ Responsibilities:
+│   │   └─ Iceberg Row-Delete Orchestrator
+│   └─ KPI:
+│       └─ Privacy P0 = 0
+│
+└─ E-4 Compliance Ops
+    ├─ U-CO1 SOC-2 Evidence Collection
+    ├─ U-CO2 GDPR Register
+    ├─ Responsibilities:
+    │   └─ Audit-Gate in Argo-CD
+    └─ KPI:
+        └─ Audit Pass = 100%
+```
+## **1F – SRE Core (Reliability & Observability)**
+
+This document captures the full structure, responsibilities, tools, KPIs, and cross-layer interfaces for the extended Reliability & Observability domain.
+
+> **Note:** This layer **does not directly interface with 1D – Data & AI Infrastructure**.
+
+---
+
+## 📌 Organizational Breakdown
+
+| Squad (Sub-Team) | Internal Units | Primary Responsibilities & Deliverables | Typical Stack / Tools | Key KPIs / SLOs | Critical Interfaces |
+|------------------|----------------|------------------------------------------|------------------------|------------------|----------------------|
+| **F-1 Observability Platform** | U-OB1 Metrics (Prometheus) <br> U-OB2 Logs (Loki) <br> U-OB3 Traces (Tempo, OTEL) | Central telemetry for all clusters/PoPs/VMs, exporter SDKs, dashboards, Thanos object store | Prometheus, Thanos, Loki, Tempo, Grafana, Jsonnet | Thanos Availability ≥ 99.95% <br> Cardinality Error < 0.1% | ◄ 1B (scrape endpoints) <br> ◄ 1C (CI metrics) <br> ◄ 1E (audit logs) |
+| **F-2 Incident Command & Response** | U-IC1 PagerDuty Admin <br> U-IC2 Post-Mortem Office | 24/7 on-call, triage bridges, blameless RCA within 24h, IC training | PagerDuty, Slack bot, Zoom bridge, Incident SDK | MTTD < 5 min <br> MTTR < 30 min (Sev-1) | ◄ 1B/1C (owner escalations) <br> ◄ 1E (security incidents) |
+| **F-3 Chaos & Resilience Engineering** | U-CH1 Fault-Injection <br> U-CH2 GameDay Program | Automated K8s chaos experiments, GameDay scenarios, publish resilience score | LitmusChaos, ChaosMesh, Gremlin | Resilience Score ≥ 0.90 | ◄ 1B (fault targets) <br> ◄ 1F-2 (incident drills) |
+| **F-4 Performance & Capacity Reliability** | U-PC1 Load-Test Harness <br> U-PC2 Performance Budget Framework | k6/Locust libraries, SLO-budget API, feed capacity models to FinOps | k6, Locust, Python forecast, HPA/vPA | SLO Miss < 2% / quarter | ◄ 1C (pipeline perf) <br> ◄ 1G (capacity models) |
+| **F-5 Reliability Automation & Tooling** *(new)* | U-RA1 Self-Healing Controllers <br> U-RA2 Toil-Buster Bots | Kubernetes controllers & Lambdas to auto-resolve recurring issues, chatops bots for runbooks | Go, Python, controller-runtime, Slack API | Toil Hours / Shift < 2h | ◄ 1F-2 (incident types) <br> ◄ 1B (cluster APIs) |
+| **F-6 Release & Availability Engineering** *(new)* | U-RE1 SLO-Guard Admission Webhook <br> U-RE2 Prod-Readiness Board | Enforce error-budget guardrails, PRR checklist & reviews, rollback scripts | Gatekeeper/OPA, Argo Rollouts, Syft, ADR templates | Rollback Success = 100% <br> PRR Turnaround < 5 days | ◄ 1C (CI/CD gate) <br> ◄ 1B (webhooks) |
+
+---
+
+## **1F – SRE Core (Reliability & Observability) Tree**
+
+```
+1F Reliability & Observability (SRE Core – Extended)
+│
+├─ F-1 Observability Platform
+│   ├─ U-OB1 Metrics (Prometheus)
+│   ├─ U-OB2 Logs (Loki)
+│   ├─ U-OB3 Traces (Tempo + OTEL)
+│   ├─ Responsibilities:
+│   │   ├─ Central Telemetry Stack
+│   │   ├─ Exporter SDKs, Dashboards
+│   │   └─ Multi-tenant Thanos Object Store
+│   └─ KPIs: Thanos ≥ 99.95%, Cardinality Error < 0.1%
+│
+├─ F-2 Incident Command & Response
+│   ├─ U-IC1 PagerDuty Admin
+│   ├─ U-IC2 Post-Mortem Office
+│   ├─ Responsibilities:
+│   │   ├─ On-call rota, Paging Policy
+│   │   ├─ RCA Template, 24h Publish
+│   │   └─ Incident Commander Training
+│   └─ KPIs: MTTD < 5 min, MTTR < 30 min
+│
+├─ F-3 Chaos & Resilience Engineering
+│   ├─ U-CH1 Fault-Injection (Litmus)
+│   ├─ U-CH2 GameDay Program
+│   ├─ Responsibilities:
+│   │   ├─ Chaos Scheduling (K8s Faults)
+│   │   └─ Quarterly GameDays
+│   └─ KPIs: Resilience Score ≥ 0.90
+│
+├─ F-4 Performance & Capacity Reliability
+│   ├─ U-PC1 Load-Test Harness
+│   ├─ U-PC2 Performance Budget Framework
+│   ├─ Responsibilities:
+│   │   ├─ Load Test Library (k6/Locust)
+│   │   ├─ Global SLO API & Autoscale
+│   │   └─ Feed Capacity Models
+│   └─ KPIs: SLO Miss < 2% / Q
+│
+├─ F-5 Reliability Automation & Tooling
+│   ├─ U-RA1 Self-Healing Controllers
+│   ├─ U-RA2 Toil-Buster Bots
+│   ├─ Responsibilities:
+│   │   ├─ Auto-Remediation for Incidents
+│   │   └─ ChatOps Bots for Runbooks
+│   └─ KPIs: Toil < 2h / Shift
+│
+└─ F-6 Release & Availability Engineering
+    ├─ U-RE1 SLO-Guard Admission Webhook
+    ├─ U-RE2 Prod-Readiness Review Board
+    ├─ Responsibilities:
+    │   ├─ Block Deploys on SLO Exhaustion
+    │   ├─ PRR Checklist + Review
+    │   └─ Rollback Scripts
+    └─ KPIs: 100% Rollback Success, PRR < 5d
+```
