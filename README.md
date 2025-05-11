@@ -221,3 +221,88 @@ This document outlines the squads, sub-units, responsibilities, tech stack, meas
         ├─ Rollback < 30s
         └─ On-Time Releases ≥ 90%
 ```
+
+## **1D – Data & AI Infrastructure**
+
+This updated version of the Data & AI Infrastructure layer introduces a complete and detailed structure including sub-units, responsibilities, core stack, measurable KPIs/SLOs, and inter-layer dependencies.
+
+---
+
+## 📌 Organizational Breakdown
+
+| Squad | Sub-Units | End-to-End Responsibilities | Core Stack | KPI / SLO | Critical Dependencies |
+|-------|-----------|-----------------------------|------------|-----------|------------------------|
+| **D-1 Data Platform** | U-DP1 Hadoop Cluster Ops (HDFS + YARN) <br> U-DP2 Spark & Trino Engines <br> U-DP3 Kafka Backbone | Cluster setup/upgrade, capacity management, high availability | Hadoop 3.x, Spark 3.5, Trino 442, Kafka 3.7 | NameNode Uptime ≥ 99.9% <br> Job Fail < 1% <br> ISR ≤ 1 | PVC/GPU from 1B <br> ACL/SSL from 1E <br> SLO from 1F |
+| **D-2 Data Engineering (Lakehouse & Pipelines)** | U-DE1 Lakehouse Ops (Iceberg Catalog) <br> U-DE2 Batch Pipelines (dbt + PySpark) <br> U-DE3 Realtime Pipelines (Flink SQL) | Iceberg schema design, batch ETL/ELT, real-time exactly-once streaming | Iceberg 1.5, dbt-core 1.9, PySpark, Flink 1.20 | Freshness ≤ 15 min <br> P99 Latency < 5s <br> DTI ≥ 0.9 | Kafka & Spark from D-1 <br> Lineage/Mask from D-4 |
+| **D-3 ML & AI Platform** | U-ML1 Feature Store (Feast) <br> U-ML2 Training (Kubeflow, Ray) <br> U-ML3 Serving (MLflow, Seldon) | Feature → Train → Serve, Drift Monitoring, Canary Release | Feast 0.40, Kubeflow 2, Ray 3, MLflow 2.11 | Drift Alert < 10 min <br> p99 Serving < 50ms | GPU from 1B <br> Budget from 1G |
+| **D-4 Governance & Observability** | U-GV1 Metadata Catalog (Atlas) <br> U-GV2 Lineage & DQ (OpenLineage + Soda) <br> U-GV3 Privacy (Ranger, Mask) | Metadata management, 100% lineage coverage, masking, GDPR deletion | Atlas 3, OpenLineage, SodaSQL, Ranger 3 | GDPR Ticket ≤ 72h <br> PII Incident = 0 | Policy with 1E <br> Tenant Alert with 1F |
+| **D-5 BI & Semantic Services (Updated)** | U-BI1 Data Modeling & Pipeline Dev (dbt Semantic + Star/Vault) <br> U-BI2 Wide-Table & Aggregation Store (Materialized Views, Column Pruning) <br> U-BI3 Metric Layer & Query Acceleration (dbt-metrics, Cube.js, Caching) | Dimensional & Data Vault modeling, documented in dbt Docs <br> dbt/Flink pipelines for wide-tables and aggregate snapshots <br> Maintain materialized views, indexes, z-ordering <br> Semantic & Metric Layer for BI tools like Superset/Tableau | dbt Semantic Layer, Cube.js, Flink, MV/Indexing | Dashboard Latency P95 < 30s | Catalog from D-4 <br> Queries from 1C |
+
+---
+
+## **1D – Data & AI Infrastructure Tree**
+
+```
+1D Data & AI Infrastructure
+│
+├─ D-1 Data Platform
+│   ├─ U-DP1 Hadoop Cluster Ops (HDFS + YARN)
+│   ├─ U-DP2 Spark & Trino Engines
+│   ├─ U-DP3 Kafka Backbone
+│   ├─ Responsibilities:
+│   │   ├─ Cluster Deployment & Upgrade
+│   │   ├─ Capacity & HA Management
+│   └─ KPIs:
+│       ├─ NameNode Uptime ≥ 99.9%
+│       ├─ Job Fail < 1%
+│       └─ ISR ≤ 1
+│
+├─ D-2 Data Engineering (Lakehouse & Pipelines)
+│   ├─ U-DE1 Lakehouse Ops (Iceberg Catalog)
+│   ├─ U-DE2 Batch Pipelines (dbt + PySpark)
+│   ├─ U-DE3 Realtime Pipelines (Flink SQL)
+│   ├─ Responsibilities:
+│   │   ├─ Iceberg Schema Design
+│   │   ├─ Batch & Real-time ETL/ELT
+│   │   └─ Exactly-Once Streaming
+│   └─ KPIs:
+│       ├─ Freshness ≤ 15 min
+│       ├─ P99 Latency < 5s
+│       └─ DTI ≥ 0.9
+│
+├─ D-3 ML & AI Platform
+│   ├─ U-ML1 Feature Store (Feast)
+│   ├─ U-ML2 Training (Kubeflow, Ray)
+│   ├─ U-ML3 Serving (MLflow, Seldon)
+│   ├─ Responsibilities:
+│   │   ├─ Feature → Train → Serve
+│   │   ├─ Drift Monitoring
+│   │   └─ Canary Release
+│   └─ KPIs:
+│       ├─ Drift Alert < 10 min
+│       └─ Serving p99 < 50ms
+│
+├─ D-4 Governance & Observability
+│   ├─ U-GV1 Metadata Catalog (Atlas)
+│   ├─ U-GV2 Lineage & DQ (OpenLineage, SodaSQL)
+│   ├─ U-GV3 Privacy (Ranger, Mask)
+│   ├─ Responsibilities:
+│   │   ├─ Full Metadata & Lineage
+│   │   ├─ Masking Policy & GDPR Delete
+│   └─ KPIs:
+│       ├─ GDPR Ticket ≤ 72h
+│       └─ PII Incident = 0
+│
+└─ D-5 BI & Semantic Services 
+    ├─ U-BI1 Data Modeling & Pipeline Dev
+    ├─ U-BI2 Wide-Table & Aggregation Store
+    ├─ U-BI3 Metric Layer & Query Acceleration
+    ├─ Responsibilities:
+    │   ├─ Dimensional & Vault Modeling in dbt Docs
+    │   ├─ Pipelines for Wide-Tables & Aggregates
+    │   ├─ Materialized Views, Indexing, Z-Order
+    │   └─ BI Metric Layer for Superset/Tableau
+    └─ KPIs:
+        └─ Dashboard Latency P95 < 30s
+```
+
