@@ -438,3 +438,120 @@ This document captures the full structure, responsibilities, tools, KPIs, and cr
     │   └─ Rollback Scripts
     └─ KPIs: 100% Rollback Success, PRR < 5d
 ```
+## **1G – FinOps & Capacity Engineering**
+
+---
+
+## 📌 Organizational Breakdown
+
+| Squad | Internal Units | Detailed Responsibilities | Key KPIs / SLOs |
+|-------|----------------|----------------------------|------------------|
+| **G-1 Cost Analytics** | U-FA1 Kubecost <br> U-FA2 CloudHealth | Enforce “Tag-before-Deploy” policy in Argo-CD | Accuracy ≥ 99% |
+| **G-2 Budget Governance** | U-BG1 CapEx Board <br> U-BG2 Charge-Back | Expose Budget API, implement `/cost-breakdown` Slack bot | Budget Variance ≤ 5% |
+| **G-3 Capacity Modelling** | U-CM1 Prophet Forecast <br> U-CM2 Scenario Planning | 3-Year DC Expansion Plans, Spot Market Planning | Forecast Error < 5% |
+| **G-4 Efficiency Engineering** | U-EE1 Spot Pool <br> U-EE2 Autoscaler | Spot Resource Coverage, Rightsizing Automation | Spot Coverage ≥ 30% |
+
+---
+
+## **1G – FinOps & Capacity Engineering Tree**
+
+```
+1G FinOps & Capacity Engineering
+│
+├─ G-1 Cost Analytics
+│   ├─ U-FA1 Kubecost
+│   ├─ U-FA2 CloudHealth
+│   ├─ Responsibilities:
+│   │   └─ Enforce "Tag-before-Deploy" in Argo-CD
+│   └─ KPI: Accuracy ≥ 99%
+│
+├─ G-2 Budget Governance
+│   ├─ U-BG1 CapEx Board
+│   ├─ U-BG2 Charge-Back
+│   ├─ Responsibilities:
+│   │   ├─ Budget API
+│   │   └─ /cost-breakdown Slack Bot
+│   └─ KPI: Variance ≤ 5%
+│
+├─ G-3 Capacity Modelling
+│   ├─ U-CM1 Prophet Forecast
+│   ├─ U-CM2 Scenario Planning
+│   ├─ Responsibilities:
+│   │   ├─ 3-Year DC Expansion Plan
+│   │   └─ Spot Market Plan
+│   └─ KPI: Forecast Error < 5%
+│
+└─ G-4 Efficiency Engineering
+    ├─ U-EE1 Spot Pool
+    ├─ U-EE2 Autoscaler
+    ├─ Responsibilities:
+    │   ├─ Spot Coverage
+    │   └─ Rightsizing Automation
+    └─ KPI: Spot ≥ 30%
+```
+
+## **1H – Product, UX & Customer-Success Division**
+
+---
+
+## 📌 Organizational Breakdown
+
+| Squad | Internal Units | End-to-End Responsibilities | KPIs / OKRs | Ownership Boundary |
+|-------|----------------|------------------------------|-------------|---------------------|
+| **H-1 Product Strategy & Road-mapping** | U-PS1 Market/User Research <br> U-PS2 Opportunity Backlog (Lean Canvas) | Monthly interviews with 8 customers, competitive/TAM analysis, quarterly roadmap for Core Cloud, Data Platform, IDP | Roadmap published quarterly <br> ≥ 80% feedback integrated into backlog | Defines priorities but does **not** write pull-requests; that is 1B/1C/1D’s job |
+| **H-2 Product-Ops & Analytics** | U-PO1 KPI Instrumentation <br> U-PO2 Growth Experiments | Define metrics (adoption, churn), run A/B tests, build ROI models per feature | Adoption growth ≥ +10% monthly <br> Internal churn < 5% | Metrics sourced from 1F, stored in separate product DB |
+| **H-3 Pricing, Packaging & GTM** | U-PP1 Pricing Model <br> U-PP2 Contracts & SLA | Define Free vs. Premium tiers, legal DPA/SLA, coordinate with Sales/Finance for P&L | Gross margin ≥ 35% <br> Contract closing ≤ 2 weeks | Owns pricing logic; raw billing comes from 1G |
+| **H-4 UX Research & DevRel** | U-UX1 Journey Mapping <br> U-DR1 Developer Advocacy | Usability testing for Backstage plugins, documentation, sample code, meetups | NPS ≥ 60 <br> ≥ 4 technical articles per quarter | Owns site documentation repo; does not touch platform core code |
+| **H-5 Customer-Success & Support** | U-CS1 Onboarding <br> U-CS2 Technical Account Mgmt. (TAM) | L1/L2 ticket SLA, enablement training for product teams | CSAT ≥ 4.7/5 <br> TTR (L2) ≤ 12 hours | Forwards complex tickets to 1F or squads under 1D |
+
+---
+
+## **1H – Product, UX & Customer Success Tree**
+
+```
+1H Product, UX & Customer-Success Division
+│
+├─ H-1 Product Strategy & Road-mapping
+│   ├─ U-PS1 Market/User Research
+│   ├─ U-PS2 Opportunity Backlog
+│   ├─ Responsibilities:
+│   │   ├─ Monthly User Interviews
+│   │   ├─ Competitive/TAM Analysis
+│   │   └─ Quarterly Roadmaps
+│   └─ KPIs: Roadmap Q3 Published, Feedback in Backlog ≥ 80%
+│
+├─ H-2 Product-Ops & Analytics
+│   ├─ U-PO1 KPI Instrumentation
+│   ├─ U-PO2 Growth Experiments
+│   ├─ Responsibilities:
+│   │   ├─ Adoption & Churn Metrics
+│   │   ├─ A/B Testing
+│   │   └─ ROI Models
+│   └─ KPIs: +10% Adoption Monthly, < 5% Churn
+│
+├─ H-3 Pricing, Packaging & GTM
+│   ├─ U-PP1 Pricing Model
+│   ├─ U-PP2 Contracts & SLA
+│   ├─ Responsibilities:
+│   │   ├─ Free vs. Premium Plans
+│   │   ├─ Legal DPA/SLA
+│   │   └─ Sales/Finance Collab for P&L
+│   └─ KPIs: Margin ≥ 35%, Contract ≤ 2 Weeks
+│
+├─ H-4 UX Research & DevRel
+│   ├─ U-UX1 Journey Mapping
+│   ├─ U-DR1 Developer Advocacy
+│   ├─ Responsibilities:
+│   │   ├─ Backstage Usability Testing
+│   │   ├─ Docs, Sample Code, Talks
+│   └─ KPIs: NPS ≥ 60, 4 Articles/Quarter
+│
+└─ H-5 Customer-Success & Support
+    ├─ U-CS1 Onboarding
+    ├─ U-CS2 Technical Account Mgmt. (TAM)
+    ├─ Responsibilities:
+    │   ├─ Ticket SLA (L1/L2)
+    │   └─ Enablement Training
+    └─ KPIs: CSAT ≥ 4.7/5, TTR ≤ 12h
+```
+
