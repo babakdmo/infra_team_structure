@@ -554,4 +554,73 @@ This document captures the full structure, responsibilities, tools, KPIs, and cr
     │   └─ Enablement Training
     └─ KPIs: CSAT ≥ 4.7/5, TTR ≤ 12h
 ```
+## **1I – Corporate IT & End-User Services**
+---
 
+## 📌 Organizational Breakdown
+
+| Team Code | Sub-Division Name | Internal Units | End-to-End Responsibilities | Key Outputs & Tools | Base KPIs | Critical Interfaces |
+|-----------|-------------------|----------------|------------------------------|----------------------|-----------|----------------------|
+| **IT-1 Service Desk & Endpoint Support** |  | U-SD1 Ticket Triage <br> U-SD2 MDM Provisioning <br> U-SD3 Knowledge Base | L1/L2 Ticket Resolution 24x7 <br> Golden Image Provisioning <br> Patch, RMA, Repairs | Jira SM Portal <br> MDM Compliance Dashboard <br> Autopilot Profiles | TTR L1 ≤ 2h (90%) <br> Patch Coverage ≥ 98% <br> CSAT ≥ 4.7/5 | ◄ 1E (Security AV/Encryption) <br> ◄ 1G (Budget Allocation) |
+| **IT-2 Enterprise Network Services** |  | U-NN1 LAN & Wi-Fi <br> U-NN2 WAN & ISP <br> U-NN3 Cabling | LAN/Wi-Fi (Spine-Leaf, SSID) <br> ISP Bandwidth & Monitoring <br> Cabling & Port Layout | NetBox Maps <br> LibreNMS Monitoring <br> ISP Dashboard | LAN/Wi-Fi Uptime ≥ 99.9% <br> ISP MTTR ≤ 30min <br> AP Utilization < 70% | ◄ 1B (POP Access) <br> ◄ 1E (NAC Policy) |
+| **IT-3 Systems & Identity Administration** |  | U-SI1 AD/SSO/MFA <br> U-SI2 System Admin (VM/AV/Patch) <br> U-SI3 Storage/File Svc | AD/Azure AD & GPO <br> VM & Server Hardening <br> Backup/Restore/File Share | AD Health Report <br> VM Dashboard (vCenter) <br> Restore Test Logs | AD Error = 0 <br> Backup ≥ 99.5% <br> Patch ≤ 7d | ◄ 1E (PKI) <br> ◄ 1F (Server Monitoring) |
+| **IT-4 Voice & Collaboration Services** |  | U-VC1 VoIP/PBX <br> U-VC2 Conferencing (Teams/Zoom) <br> U-VC3 Call Center Ops | IVR Setup, PBX Ops <br> Call Quality & Recording <br> Conferencing License Management | CDR/MOS Dashboards <br> IVR Scripts <br> QoS Reports | ASR ≥ 99% <br> MOS > 3.8 (95%) <br> Missed Calls < 2% | ◄ IT-2 (Voice VLANs) <br> ◄ IT-1 (Headset Support) |
+| **IT-5 Asset & Procurement** |  | U-AP1 Procurement/Contracts <br> U-AP2 Inventory (RFID/CMDB) <br> U-AP3 License Mgmt | Hardware/Software Purchasing <br> Inventory & Device Tracking <br> SaaS/On-Prem License CMDB | Accurate CMDB <br> License Compliance Dashboards <br> Inventory Reports | Inventory Accuracy = 100% <br> Laptop Delivery ≤ 1 Day <br> Over-License Rate = 0% | ◄ IT-1 (Device Delivery) <br> ◄ 1G (Cost Control) |
+
+---
+
+## **1I – Corporate IT & End-User Services Tree**
+
+```
+1I Corporate IT & End-User Services
+│
+├─ IT-1 Service Desk & Endpoint Support
+│   ├─ U-SD1 Ticket Triage & Remote Support
+│   ├─ U-SD2 MDM Provisioning (Intune/Jamf)
+│   ├─ U-SD3 Knowledge Base
+│   ├─ Responsibilities:
+│   │   ├─ L1/L2 Ticket Response
+│   │   ├─ Device Provisioning w/ Golden Image
+│   │   └─ Weekly Patch & RMA Management
+│   └─ KPIs: TTR ≤ 2h, Patch ≥ 98%, CSAT ≥ 4.7
+│
+├─ IT-2 Enterprise Network Services
+│   ├─ U-NN1 LAN & Wireless
+│   ├─ U-NN2 WAN & ISP
+│   ├─ U-NN3 Cabling & Ports
+│   ├─ Responsibilities:
+│   │   ├─ Switch/Wi-Fi Backbone
+│   │   ├─ Internet Bandwidth Monitoring
+│   │   └─ Cabling Maintenance
+│   └─ KPIs: Uptime ≥ 99.9%, MTTR ≤ 30min
+│
+├─ IT-3 Systems & Identity Administration
+│   ├─ U-SI1 AD/SSO/MFA
+│   ├─ U-SI2 Server & VM Admin
+│   ├─ U-SI3 File & Storage Services
+│   ├─ Responsibilities:
+│   │   ├─ AD/SSO/MFA Policy
+│   │   ├─ Server Hardening & Patch
+│   │   └─ Backup/DR Implementation
+│   └─ KPIs: Backup ≥ 99.5%, Patch ≤ 7d
+│
+├─ IT-4 Voice & Collaboration Services
+│   ├─ U-VC1 VoIP & PBX
+│   ├─ U-VC2 Conferencing (Teams/Zoom)
+│   ├─ U-VC3 Call Center Ops
+│   ├─ Responsibilities:
+│   │   ├─ IVR, Queueing & Call Setup
+│   │   ├─ Conferencing Tools & Licenses
+│   │   └─ QoS Monitoring & Reporting
+│   └─ KPIs: ASR ≥ 99%, MOS > 3.8
+│
+└─ IT-5 Asset & Procurement
+    ├─ U-AP1 Procurement & Vendor Contracts
+    ├─ U-AP2 Inventory & Warehousing
+    ├─ U-AP3 License Management
+    ├─ Responsibilities:
+    │   ├─ IT Purchasing Workflow
+    │   ├─ Inventory + Barcode Tracking
+    │   └─ License CMDB Accuracy
+    └─ KPIs: Inventory 100%, Laptop ≤ 1d
+```
