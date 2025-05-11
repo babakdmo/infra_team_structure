@@ -21,8 +21,8 @@ This document outlines the internal squads, sub-units, responsibilities, and KPI
 
 | Squad | Internal Units (Sub-Teams) | Responsibilities | KPIs / Objectives |
 |-------|----------------------------|------------------|-------------------|
-| **A-1 Procurement & Vendor Operations** | U-V1 Vendor Relations  <br> U-V2 CapEx Planning | RFP/RFQ processes, SLA negotiation, TCO management | ≥ 8% cost savings <br> Lead time ≤ 90 days |
-| **A-2 Warehouse & Inventory** | U-W1 Inbound Logistics <br> U-W2 CMDB / Asset Management <br> U-W3 RMA / Disposal | Barcode + RFID tracking, accurate CMDB, RMA processing, electronic waste management | 100% inventory accuracy <br> RMA turnaround ≤ 5 days |
+| **A-1 Procurement & Vendor Operations** | U-V1 Vendor Relations  <br> U-V2 CapEx Planning | RFP/RFQ processes, SLA negotiation, TCO management | Cost savings ≥ 8% <br> Lead time ≤ 90 days |
+| **A-2 Warehouse & Inventory** | U-W1 Inbound Logistics <br> U-W2 CMDB / Asset Management <br> U-W3 RMA / Disposal | Barcode + RFID tracking, accurate CMDB, RMA processing, electronic waste management | 100% inventory accuracy  <br> RMA turnaround ≤ 5 days |
 | **A-3 Datacenter Testing & Installation** | U-D1 Burn-In Testing <br> U-D2 Racking & Cabling <br> U-D3 Site SAT (Site Acceptance Test) | 48h soak test, fiber cabling, LLDP labeling | DOA < 0.3% <br> Installation time ≤ 7 days |
 
 ## **1A – Facilities & Physical Infrastructure Tree**
@@ -68,11 +68,6 @@ This document outlines the internal squads, sub-units, responsibilities, and KPI
 ```
 
 ## **1B – Core Cloud Infrastructure & Platform**
-
-This document outlines the squads, internal units, detailed responsibilities, and KPIs for the Core Cloud Infrastructure & Platform department.
-
-> **Governance Boundary:**  
-> The 1B squad is the sole authority for Kernel versions, CNI/CSI integrations, and GPU NodePool configurations. All other layers are consumers of its APIs only.
 
 ---
 
@@ -138,11 +133,6 @@ This document outlines the squads, internal units, detailed responsibilities, an
 ```
 
 ## **1C – Platform Engineering & Developer Experience**
-
-This document outlines the squads, sub-units, responsibilities, tech stack, measurable KPIs/SLOs, and key inter-team dependencies for developer experience and platform enablement.
-
-> **Note:**  
-> LTFC = Lead-Time-for-Change (from commit to stable deployment in Dev)
 
 ---
 
@@ -225,8 +215,6 @@ This document outlines the squads, sub-units, responsibilities, tech stack, meas
 ```
 
 ## **1D – Data & AI Infrastructure**
-
-This updated version of the Data & AI Infrastructure layer introduces a complete and detailed structure including sub-units, responsibilities, core stack, measurable KPIs/SLOs, and inter-layer dependencies.
 
 ---
 
@@ -362,10 +350,6 @@ This updated version of the Data & AI Infrastructure layer introduces a complete
         └─ Audit Pass = 100%
 ```
 ## **1F – SRE Core (Reliability & Observability)**
-
-This document captures the full structure, responsibilities, tools, KPIs, and cross-layer interfaces for the extended Reliability & Observability domain.
-
-> **Note:** This layer **does not directly interface with 1D – Data & AI Infrastructure**.
 
 ---
 
