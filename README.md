@@ -13,11 +13,21 @@ Chief Infrastructure & Platform Officer (CIPO)
 ├─ 1H  Product, UX & Customer-Success Division
 └─ 1I  Corporate IT & End-User Services
 ```
-## **1A – Facilities & Physical Infrastructure**
 
-This document outlines the internal squads, sub-units, responsibilities, and KPIs for the Facilities & Physical Infrastructure department.
+###  Explanation of Organizational Breakdown:
 
-## 📌 Organizational Breakdown
+Each row outlines:
+
+- **Squad**: A team that owns a specific operational domain.
+- **Internal Units (Sub-Teams)**: Subdivisions within each squad responsible for more granular tasks.
+- **Responsibilities**: Core duties and service scopes handled by each squad.
+- **KPIs / Objectives**: Key measurable performance indicators for operational success.
+
+---
+
+# **1A – Facilities & Physical Infrastructure**
+
+### 📌 Organizational Breakdown
 
 | Squad | Internal Units (Sub-Teams) | Responsibilities | KPIs / Objectives |
 |-------|----------------------------|------------------|-------------------|
@@ -25,7 +35,15 @@ This document outlines the internal squads, sub-units, responsibilities, and KPI
 | **A-2 Warehouse & Inventory** | U-W1 Inbound Logistics <br> U-W2 CMDB / Asset Management <br> U-W3 RMA / Disposal | Barcode + RFID tracking, accurate CMDB, RMA processing, electronic waste management | 100% inventory accuracy  <br> RMA turnaround ≤ 5 days |
 | **A-3 Datacenter Testing & Installation** | U-D1 Burn-In Testing <br> U-D2 Racking & Cabling <br> U-D3 Site SAT (Site Acceptance Test) | 48h soak test, fiber cabling, LLDP labeling | DOA < 0.3% <br> Installation time ≤ 7 days |
 
-## **1A – Facilities & Physical Infrastructure Tree**
+### Summary of Table Structure
+
+| Squad | Description |
+|-------|-------------|
+| **A-1 Procurement & Vendor Operations** | Manages procurement activities and vendor relationships, focusing on negotiation and cost optimization. |
+| **A-2 Warehouse & Inventory** | Controls physical inventory, asset tracking using barcodes/RFID, and RMA processing including e-waste. |
+| **A-3 Datacenter Testing & Installation** | Conducts quality assurance (burn-in, soak testing) and installs infrastructure including fiber cabling and physical racking. |
+
+### **1A – Facilities & Physical Infrastructure Tree**
 
 ```
 1A Facilities & Physical Infra
@@ -67,7 +85,7 @@ This document outlines the internal squads, sub-units, responsibilities, and KPI
         └─ Installation ≤ 7 days
 ```
 
-## **1B – Core Cloud Infrastructure & Platform**
+# **1B – Core Cloud Infrastructure & Platform**
 
 ---
 
