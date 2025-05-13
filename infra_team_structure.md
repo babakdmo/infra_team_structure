@@ -19,8 +19,22 @@ Chief Infrastructure & Platform Officer (CIPO)
 Each section is a **team** responsible for a key area in infrastructure. Inside each team are **sub-teams** that handle more specific jobs. This structure helps us organize and manage all physical and cloud systems better.
 
 ---
-
 # **A – Facilities & Physical Infrastructure**
+
+```
+1A - Facilities & Physical Infrastructure
+│
+├─ A-1 Buying & Vendor Management
+├─ A-2 Inventory & Warehousing
+├─ A-3 Server Hardware Setup
+└─ A-4 Networking Setup in Datacenter
+```
+
+###  What This Team Does:
+
+This team handles everything related to the physical part of the infrastructure. They manage procurement, store equipment, test and install servers, and wire up the datacenter network.
+
+---
 
 ### 🔧 Team Details
 
@@ -31,6 +45,8 @@ Each section is a **team** responsible for a key area in infrastructure. Inside 
 | **A-3 Server Hardware Setup** | U-D1 Hardware Testing <br> U-D2 Server Prep & Imaging <br> U-D3 Rack Installation | Test server parts, install OS/images, put servers into racks |
 | **A-4 Networking Setup in Datacenter** | U-N1 Network Cabling <br> U-N2 Switch & Router Setup <br> U-N3 Port Testing | Run cables, configure switches and routers, make sure connections work |
 
+---
+
 ### Summary Table
 
 | Team | Description |
@@ -39,6 +55,8 @@ Each section is a **team** responsible for a key area in infrastructure. Inside 
 | **A-2 Inventory & Warehousing** | Manages stock rooms, keeps track of all hardware, and handles recycling or broken items. |
 | **A-3 Server Hardware Setup** | Makes sure servers are working correctly before putting them into production. |
 | **A-4 Networking Setup in Datacenter** | Installs and configures networking equipment and cabling inside the datacenter. |
+
+---
 
 ### **A – Team Tree View**
 
@@ -81,6 +99,8 @@ Each section is a **team** responsible for a key area in infrastructure. Inside 
     │   ├─ Configure switches and routers
     │   └─ Test and validate all ports and links
 ```
+---
+
 # **B – Core Cloud Infrastructure & Platform**
 
 ```
@@ -91,7 +111,7 @@ Each section is a **team** responsible for a key area in infrastructure. Inside 
 └─ B-3 Network & Edge
 ```
 
-### 💡 What This Team Does:
+### What This Team Does:
 
 This team builds and manages the technical backbone of our private cloud. They take care of Kubernetes clusters, cloud storage, and software-defined networking across datacenters and edge locations.
 
@@ -104,6 +124,16 @@ This team builds and manages the technical backbone of our private cloud. They t
 | **B-1 Compute Platform** | U-C1 Cluster-API <br> U-C2 NodePool <br> U-C3 Kernel Lifecycle | Deploy and manage Kubernetes clusters, handle different node types, manage and update Linux kernels |
 | **B-2 Storage Services** | U-S1 Object Storage (Ceph-S3) <br> U-S2 Block Storage (RBD) <br> U-S3 DB-as-a-Service (Vitess) | Provide different storage options: object storage for files, block storage for volumes, and hosted databases |
 | **B-3 Network & Edge** | U-N1 Spine-Leaf BGP-EVPN <br> U-N2 POP / CDN <br> U-N3 DNS / IPAM | Manage datacenter networking, optimize data delivery, and take care of DNS and IP address planning |
+
+---
+
+###  Summary Table
+
+| Team | Description |
+|------|-------------|
+| **B-1 Compute Platform** | Manages Kubernetes clusters and handles system kernel upgrades and different hardware node pools. |
+| **B-2 Storage Services** | Provides cloud-native storage like object storage (Ceph-S3), block volumes (RBD), and database hosting (Vitess). |
+| **B-3 Network & Edge** | Operates the software-defined network, including BGP-EVPN fabric, CDN nodes, DNS, and IP address allocation. |
 
 ---
 
@@ -139,3 +169,6 @@ This team builds and manages the technical backbone of our private cloud. They t
     │   ├─ Operate CDN and edge routing
     │   └─ Manage DNS zones and IP space
 ```
+
+---
+
