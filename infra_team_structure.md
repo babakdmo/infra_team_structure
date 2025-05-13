@@ -177,4 +177,84 @@ This area provides the foundational compute, storage, and connectivity services 
     │   └─ Maintain p99 latency < 100 ms, network availability ≥ 99.99 %
 ```
 ---
+# **1C – Platform Engineering & Developer Experience**
 
+```
+1C - Platform Engineering & Developer Experience
+│
+├─ C-1 IDP Core & Self-Service
+├─ C-2 CI/CD Platform
+├─ C-4 Dev Environment Tooling
+└─ C-5 Release Engineering
+```
+
+## What This Area Does
+
+Platform Engineering & DevEx gives every developer a smooth path from the first `git init` to a production roll‑out.  
+It hosts the internal developer portal, shapes build and deploy pipelines, provides local and shared Kubernetes environments, and runs a predictable release train with instant rollbacks.
+
+---
+
+## 🔧 Team Details
+
+| Team | Sub‑Units | What They Do |
+|------|-----------|--------------|
+| **C‑1 IDP Core & Self‑Service** | U‑P1 Software Catalog <br> U‑P2 Golden‑Path Scaffolder <br> U‑P3 Dev‑Namespace Plugin | Keep the service catalog fresh, scaffold new projects in <30 s, and give developers a temporary namespace that lasts 72 h |
+| **C‑2 CI/CD Platform** | U‑CI1 Build & Cache Farm <br> U‑CI2 Argo CD Control‑Plane <br> U‑CI3 Ephemeral Env Engine | Provide ready‑to‑use build/test pipelines, sign every container image, and spin up short‑lived dev namespaces that clean themselves up |
+| **C‑4 Dev Environment Tooling** | U‑DEV1 Local‑K8s Kit <br> U‑DEV2 Dev‑Cluster Provisioner <br> U‑DEV3 Dev‑Secrets & TLS | Offer a one‑command dev bootstrap, keep dev clusters close to prod, and hand out short‑lived secrets & TLS certs |
+| **C‑5 Release Engineering** | U‑RE1 SemVer Policy <br> U‑RE2 Release Train Automation <br> U‑RE3 Rollback Orchestrator | Run a bi‑weekly release calendar, publish signed changelogs & SBOMs, and let teams roll back with one click |
+
+---
+
+## Summary Table
+
+| Team | Description |
+|------|-------------|
+| **C‑1 IDP Core & Self‑Service** | Self‑service portal for metadata, scaffolding, and short‑lived dev namespaces. |
+| **C‑2 CI/CD Platform** | End‑to‑end build, test, sign, and deploy pipelines with GitOps control. |
+| **C‑4 Dev Environment Tooling** | Local and shared Kubernetes environments that mirror production and automate secrets. |
+| **C‑5 Release Engineering** | Predictable release train, signed artefacts, and instant rollbacks. |
+
+---
+
+## **1C – Team Tree View**
+
+```
+1C - Platform Engineering & Developer Experience
+│
+├─ C-1 IDP Core & Self-Service
+│   ├─ U-P1 Software Catalog
+│   ├─ U-P2 Golden-Path Scaffolder
+│   ├─ U-P3 Dev-Namespace Plugin
+│   ├─ Tasks:
+│   │   ├─ Keep service catalog fresh
+│   │   ├─ Scaffold new projects in <30 s
+│   │   └─ Give devs a 3‑day namespace
+│
+├─ C-2 CI/CD Platform
+│   ├─ U-CI1 Build & Cache Farm
+│   ├─ U-CI2 Argo CD Control-Plane
+│   ├─ U-CI3 Ephemeral Env Engine
+│   ├─ Tasks:
+│   │   ├─ Maintain build & test pipelines
+│   │   ├─ Sign container images
+│   │   └─ Spin up & auto‑clean dev namespaces
+│
+├─ C-4 Dev Environment Tooling
+│   ├─ U-DEV1 Local-K8s Kit
+│   ├─ U-DEV2 Dev-Cluster Provisioner
+│   ├─ U-DEV3 Dev-Secrets & TLS
+│   ├─ Tasks:
+│   │   ├─ Provide one‑command dev bootstrap
+│   │   ├─ Keep dev clusters prod‑like
+│   │   └─ Hand out short‑lived secrets & certs
+│
+└─ C-5 Release Engineering
+    ├─ U-RE1 SemVer Policy
+    ├─ U-RE2 Release Train Automation
+    ├─ U-RE3 Rollback Orchestrator
+    ├─ Tasks:
+    │   ├─ Run bi‑weekly release calendar
+    │   ├─ Publish signed changelogs & SBOMs
+    │   └─ Offer one‑click rollback
+```
