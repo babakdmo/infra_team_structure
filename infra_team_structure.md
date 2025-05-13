@@ -3,85 +3,81 @@
 ```
 Chief Infrastructure & Platform Officer (CIPO)
 │
-├─ 1A  Facilities & Physical Infra
-├─ 1B  Core Cloud Infra & Platform
-├─ 1C  Platform Engineering & Developer Experience
-├─ 1D  Data & AI Infrastructure
-├─ 1E  Security, Privacy & Compliance
-├─ 1F  Reliability & Observability (SRE Core)
-├─ 1G  FinOps & Capacity Engineering
-├─ 1H  Product, UX & Customer-Success Division
-└─ 1I  Corporate IT & End-User Services
+├─ [1] A - Facilities & Physical Infrastructure
+├─ [2] B - Core Cloud Infrastructure & Platform
+├─ [3] C - Platform Engineering & Developer Tools
+├─ [4] D - Data & AI Infrastructure
+├─ [5] E - Security, Privacy & Compliance
+├─ [6] F - Site Reliability & Monitoring (SRE Core)
+├─ [7] G - Cost Management & Capacity Planning
+├─ [8] H - Product, UX & Customer Support
+└─ [9] I - IT Support & Corporate Services
 ```
 
-###  Explanation of Organizational Breakdown:
+###  What This Structure Means:
 
-Each row outlines:
-
-- **Squad**: A team that owns a specific operational domain.
-- **Internal Units (Sub-Teams)**: Subdivisions within each squad responsible for more granular tasks.
-- **Responsibilities**: Core duties and service scopes handled by each squad.
+Each section is a **team** responsible for a key area in infrastructure. Inside each team are **sub-teams** that handle more specific jobs. This structure helps us organize and manage all physical and cloud systems better.
 
 ---
 
-# **1A – Facilities & Physical Infrastructure**
+# **A – Facilities & Physical Infrastructure**
 
-### 📌 Organizational Breakdown
+### 🔧 Team Details
 
-| Squad | Internal Units (Sub-Teams) | Responsibilities |
-|-------|----------------------------|------------------|
-| **A-1 Procurement & Vendor Operations** | U-V1 Vendor Relations  <br> U-V2 CapEx Planning | RFP/RFQ processes, SLA negotiation, TCO management |
-| **A-2 Warehouse & Inventory** | U-W1 Inbound Logistics <br> U-W2 CMDB / Asset Management <br> U-W3 RMA / Disposal | Barcode + RFID tracking, accurate CMDB, RMA processing, electronic waste management |
-| **A-3 Datacenter Hardware Testing & Installation** | U-D1 Burn-In Testing <br> U-D2 Server Configuration & Imaging <br> U-D3 Physical Installation & Tagging | Full hardware validation (memory, disk, network), server casing, image loading, and final rack/LLDP tagging |
-| **A-4 Datacenter Network Configuration** | U-N1 Rack-to-Core Cabling <br> U-N2 Switch & Router Provisioning <br> U-N3 Port Mapping & Validation | End-to-end setup of datacenter cabling, ToR switch/router config, and patch panel integrity |
+| Team | Sub-Teams | What They Do |
+|------|-----------|--------------|
+| **A-1 Buying & Vendor Management** | U-V1 Vendor Relations <br> U-V2 Budget & Planning | Talk to vendors, handle purchase orders, manage budgets |
+| **A-2 Inventory & Warehousing** | U-W1 Incoming Equipment <br> U-W2 Asset Records <br> U-W3 Repairs & Disposal | Track incoming items, keep asset records, handle repairs and recycling |
+| **A-3 Server Hardware Setup** | U-D1 Hardware Testing <br> U-D2 Server Prep & Imaging <br> U-D3 Rack Installation | Test server parts, install OS/images, put servers into racks |
+| **A-4 Networking Setup in Datacenter** | U-N1 Network Cabling <br> U-N2 Switch & Router Setup <br> U-N3 Port Testing | Run cables, configure switches and routers, make sure connections work |
 
-### Summary of Table Structure
+### Summary Table
 
-| Squad | Description |
-|-------|-------------|
-| **A-1 Procurement & Vendor Operations** | Manages procurement activities and vendor relationships, focusing on negotiation and cost optimization. |
-| **A-2 Warehouse & Inventory** | Controls physical inventory, asset tracking using barcodes/RFID, and RMA processing including e-waste. |
-| **A-3 Datacenter Hardware Testing & Installation** | Performs server hardware validation, installs cases, loads firmware and images, and finalizes rack installation and labeling. |
-| **A-4 Datacenter Network Configuration** | Configures physical network cabling, installs switches and routers, validates link connections, and performs port mapping. |
+| Team | Description |
+|------|-------------|
+| **A-1 Buying & Vendor Management** | Handles vendor relations and buying all datacenter equipment. |
+| **A-2 Inventory & Warehousing** | Manages stock rooms, keeps track of all hardware, and handles recycling or broken items. |
+| **A-3 Server Hardware Setup** | Makes sure servers are working correctly before putting them into production. |
+| **A-4 Networking Setup in Datacenter** | Installs and configures networking equipment and cabling inside the datacenter. |
 
-### **1A – Facilities & Physical Infrastructure Tree**
+### **A – Team Tree View**
 
 ```
-1A Facilities & Physical Infra
+1A - Facilities & Physical Infrastructure
 │
-├─ A-1 Procurement & Vendor Ops
+├─ A-1 Buying & Vendor Management
 │   ├─ U-V1 Vendor Relations
-│   ├─ U-V2 CapEx Planning
-│   ├─ Responsibilities:
-│   │   ├─ RFP/RFQ Processes
-│   │   ├─ SLA Negotiation
-│   │   └─ TCO Management
+│   ├─ U-V2 Budget & Planning
+│   ├─ Tasks:
+│   │   ├─ Talk to vendors
+│   │   ├─ Create purchase orders
+│   │   └─ Manage costs and budgets
 │
-├─ A-2 Warehouse & Inventory
-│   ├─ U-W1 Inbound Logistics
-│   ├─ U-W2 CMDB / Asset Management
-│   ├─ U-W3 RMA / Disposal
-│   ├─ Responsibilities:
-│   │   ├─ Barcode + RFID Tracking
-│   │   ├─ Accurate CMDB
-│   │   ├─ RMA Processing
-│   │   └─ e-Waste Management
+├─ A-2 Inventory & Warehousing
+│   ├─ U-W1 Incoming Equipment
+│   ├─ U-W2 Asset Records
+│   ├─ U-W3 Repairs & Disposal
+│   ├─ Tasks:
+│   │   ├─ Receive equipment
+│   │   ├─ Track all devices in records
+│   │   ├─ Handle damaged items
+│   │   └─ Recycle or dispose items properly
 │
-├─ A-3 Datacenter Hardware Testing & Installation
-│   ├─ U-D1 Burn-In Testing
-│   ├─ U-D2 Server Configuration & Imaging
-│   ├─ U-D3 Physical Installation & Tagging
-│   ├─ Responsibilities:
-│   │   ├─ Full Hardware Validation
-│   │   ├─ Server Casing & Firmware/OS Loading
-│   │   └─ Final Rack Tagging & Installation
+├─ A-3 Server Hardware Setup
+│   ├─ U-D1 Hardware Testing
+│   ├─ U-D2 Server Prep & Imaging
+│   ├─ U-D3 Rack Installation
+│   ├─ Tasks:
+│   │   ├─ Test memory, disks, power, etc.
+│   │   ├─ Load OS images or firmware
+│   │   └─ Install and label servers in racks
 │
-└─ A-4 Datacenter Network Configuration
-    ├─ U-N1 Rack-to-Core Cabling
-    ├─ U-N2 Switch & Router Provisioning
-    ├─ U-N3 Port Mapping & Validation
-    ├─ Responsibilities:
-    │   ├─ Physical Cable Management
-    │   ├─ Switch/Router Configuration
-    │   └─ Patch Panel & Link Validation
+└─ A-4 Networking Setup in Datacenter
+    ├─ U-N1 Network Cabling
+    ├─ U-N2 Switch & Router Setup
+    ├─ U-N3 Port Testing
+    ├─ Tasks:
+    │   ├─ Connect cables to racks
+    │   ├─ Configure switches and routers
+    │   └─ Test and validate all ports and links
 ```
