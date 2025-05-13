@@ -108,36 +108,36 @@ This team handles everything related to the physical part of the infrastructure.
 │
 ├─ B-1 Compute Platform
 ├─ B-2 Storage Services
-└─ B-3 Network & Edge
+└─ B-3 Network, Edge & Service Connectivity
 ```
 
-### What This Team Does:
+## What This Area Does
 
-This team builds and manages the technical backbone of our private cloud. They take care of Kubernetes clusters, cloud storage, and software-defined networking across datacenters and edge locations.
+This area provides the foundational compute, storage, and connectivity services that power every product environment—​from bare‑metal servers and Kubernetes nodes in our private datacentres to the multitenant service‑mesh that secures east‑west traffic. deliver a single, end‑to‑end service‑connectivity platform.
 
 ---
 
-### 🔧 Team Details
+## 🔧 Team Details
 
-| Team | Sub-Teams | What They Do |
+| Team | Sub‑Units | What They Do |
 |------|-----------|--------------|
-| **B-1 Compute Platform** | U-C1 Cluster-API <br> U-C2 NodePool <br> U-C3 Kernel Lifecycle | Deploy and manage Kubernetes clusters, handle different node types, manage and update Linux kernels |
-| **B-2 Storage Services** | U-S1 Object Storage (Ceph-S3) <br> U-S2 Block Storage (RBD) <br> U-S3 DB-as-a-Service (Vitess) | Provide different storage options: object storage for files, block storage for volumes, and hosted databases |
-| **B-3 Network & Edge** | U-N1 Spine-Leaf BGP-EVPN <br> U-N2 POP / CDN <br> U-N3 DNS / IPAM | Manage datacenter networking, optimize data delivery, and take care of DNS and IP address planning |
+| **B‑1 Compute Platform** | U‑C1 Cluster‑API <br> U‑C2 NodePool <br> U‑C3 Kernel Lifecycle | Deploy and operate Kubernetes clusters, manage heterogeneous node pools, patch and rollout Linux kernels |
+| **B‑2 Storage Services** | U‑S1 Object Storage (Ceph‑S3) <br> U‑S2 Block Storage (RBD) <br> U‑S3 DB‑as‑a‑Service (Vitess) | Provide S3‑compatible object storage, persistent block volumes, and highly available Vitess‑backed MySQL clusters |
+| **B‑3 Network, Edge & Service Connectivity** | U‑NE1 Spine‑Leaf BGP‑EVPN <br> U‑NE2 POP / CDN <br> U‑NE3 DNS / IPAM <br> U‑NE4 Istio Ambient Mesh <br> U‑NE5 API Gateway <br> U‑NE6 Feature Flags / Canary | Build & operate the L3/L4 network fabric, edge POPs and CDN, authoritative DNS & IP space, plus L7 mesh (STRICT mTLS), Envoy API gateway, rate‑limit tiers, and canary/feature‑flag rollout automation |
 
 ---
 
-###  Summary Table
+## Summary Table
 
 | Team | Description |
 |------|-------------|
-| **B-1 Compute Platform** | Manages Kubernetes clusters and handles system kernel upgrades and different hardware node pools. |
-| **B-2 Storage Services** | Provides cloud-native storage like object storage (Ceph-S3), block volumes (RBD), and database hosting (Vitess). |
-| **B-3 Network & Edge** | Operates the software-defined network, including BGP-EVPN fabric, CDN nodes, DNS, and IP address allocation. |
+| **B‑1 Compute Platform** | Runs all Kubernetes control planes and worker pools, including kernel lifecycle management. |
+| **B‑2 Storage Services** | Delivers resilient object, block, and managed‑database services for stateful workloads. |
+| **B‑3 Network, Edge & Service Connectivity** | Provides unified data‑centre networking, global edge distribution, service‑mesh security, API ingress, and progressive‑delivery tooling. |
 
 ---
 
-### **B – Team Tree View**
+## **B – Team Tree View**
 
 ```
 1B - Core Cloud Infrastructure & Platform
@@ -148,7 +148,7 @@ This team builds and manages the technical backbone of our private cloud. They t
 │   ├─ U-C3 Kernel Lifecycle
 │   ├─ Tasks:
 │   │   ├─ Manage Kubernetes clusters
-│   │   ├─ Configure node pools
+│   │   ├─ Configure heterogeneous node pools
 │   │   └─ Patch and manage Linux kernels
 │
 ├─ B-2 Storage Services
@@ -157,18 +157,24 @@ This team builds and manages the technical backbone of our private cloud. They t
 │   ├─ U-S3 DB-as-a-Service (Vitess)
 │   ├─ Tasks:
 │   │   ├─ Provide object and block storage
-│   │   ├─ Maintain storage reliability
-│   │   └─ Run and support database hosting
+│   │   ├─ Maintain durability & replication
+│   │   └─ Run and support Vitess clusters
 │
-└─ B-3 Network & Edge
-    ├─ U-N1 Spine-Leaf BGP-EVPN
-    ├─ U-N2 POP / CDN
-    ├─ U-N3 DNS / IPAM
+└─ B-3 Network, Edge & Service Connectivity
+    ├─ U-NE1 Spine-Leaf BGP-EVPN
+    ├─ U-NE2 POP / CDN
+    ├─ U-NE3 DNS / IPAM
+    ├─ U-NE4 Istio Ambient Mesh
+    ├─ U-NE5 API Gateway
+    ├─ U-NE6 Feature Flags / Canary
     ├─ Tasks:
-    │   ├─ Build and manage network fabric
-    │   ├─ Operate CDN and edge routing
-    │   └─ Manage DNS zones and IP space
+    │   ├─ Engineer & operate network fabric
+    │   ├─ Run CDN pops & edge routing
+    │   ├─ Manage DNS zones & IP space
+    │   ├─ Enforce STRICT mTLS via mesh
+    │   ├─ Operate Envoy gateway & policies
+    │   ├─ Orchestrate canary & feature flags
+    │   └─ Maintain p99 latency < 100 ms, network availability ≥ 99.99 %
 ```
-
 ---
 
