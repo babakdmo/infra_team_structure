@@ -81,3 +81,61 @@ Each section is a **team** responsible for a key area in infrastructure. Inside 
     │   ├─ Configure switches and routers
     │   └─ Test and validate all ports and links
 ```
+# **B – Core Cloud Infrastructure & Platform**
+
+```
+1B - Core Cloud Infrastructure & Platform
+│
+├─ B-1 Compute Platform
+├─ B-2 Storage Services
+└─ B-3 Network & Edge
+```
+
+### 💡 What This Team Does:
+
+This team builds and manages the technical backbone of our private cloud. They take care of Kubernetes clusters, cloud storage, and software-defined networking across datacenters and edge locations.
+
+---
+
+### 🔧 Team Details
+
+| Team | Sub-Teams | What They Do |
+|------|-----------|--------------|
+| **B-1 Compute Platform** | U-C1 Cluster-API <br> U-C2 NodePool <br> U-C3 Kernel Lifecycle | Deploy and manage Kubernetes clusters, handle different node types, manage and update Linux kernels |
+| **B-2 Storage Services** | U-S1 Object Storage (Ceph-S3) <br> U-S2 Block Storage (RBD) <br> U-S3 DB-as-a-Service (Vitess) | Provide different storage options: object storage for files, block storage for volumes, and hosted databases |
+| **B-3 Network & Edge** | U-N1 Spine-Leaf BGP-EVPN <br> U-N2 POP / CDN <br> U-N3 DNS / IPAM | Manage datacenter networking, optimize data delivery, and take care of DNS and IP address planning |
+
+---
+
+### **B – Team Tree View**
+
+```
+1B - Core Cloud Infrastructure & Platform
+│
+├─ B-1 Compute Platform
+│   ├─ U-C1 Cluster-API
+│   ├─ U-C2 NodePool
+│   ├─ U-C3 Kernel Lifecycle
+│   ├─ Tasks:
+│   │   ├─ Manage Kubernetes clusters
+│   │   ├─ Configure node pools
+│   │   └─ Patch and manage Linux kernels
+│
+├─ B-2 Storage Services
+│   ├─ U-S1 Object Storage (Ceph-S3)
+│   ├─ U-S2 Block Storage (RBD)
+│   ├─ U-S3 DB-as-a-Service (Vitess)
+│   ├─ Tasks:
+│   │   ├─ Provide object and block storage
+│   │   ├─ Maintain storage reliability
+│   │   └─ Run and support database hosting
+│
+└─ B-3 Network & Edge
+    ├─ U-N1 Spine-Leaf BGP-EVPN
+    ├─ U-N2 POP / CDN
+    ├─ U-N3 DNS / IPAM
+    ├─ Tasks:
+    │   ├─ Build and manage network fabric
+    │   ├─ Operate CDN and edge routing
+    │   └─ Manage DNS zones and IP space
+```
