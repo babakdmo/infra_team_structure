@@ -680,5 +680,96 @@ This division bridges product direction with user needs, go-to-market strategies
     │   └─ Enablement Training
 ```
 
+# **I – Corporate IT & End-User Services**
 
+```
+1I - Corporate IT & End-User Services
+│
+├─ IT-1 Service Desk & Endpoint Support
+├─ IT-2 Enterprise Network Services
+├─ IT-3 Systems & Identity Administration
+├─ IT-4 Voice & Collaboration Services
+└─ IT-5 Asset & Procurement
+```
+
+### What This Team Does:
+
+This team supports the enterprise’s technology backbone for internal users. They handle everything from helpdesk tickets and device provisioning to network operations, identity systems, voice services, and IT procurement. They ensure employees are well-supported, connected, and securely provisioned.
+
+---
+
+### 🔧 Team Details
+
+| Team | Sub-Teams | What They Do |
+|------|-----------|--------------|
+| **IT-1 Service Desk & Endpoint Support** | U-SD1 Ticket Triage <br> U-SD2 MDM Provisioning <br> U-SD3 Knowledge Base | Resolve helpdesk tickets, manage endpoint devices, maintain knowledge articles |
+| **IT-2 Enterprise Network Services** | U-NN1 LAN & Wi-Fi <br> U-NN2 WAN & ISP <br> U-NN3 Cabling | Maintain campus and WAN networking infrastructure, ISP liaison, structured cabling |
+| **IT-3 Systems & Identity Administration** | U-SI1 AD/SSO/MFA <br> U-SI2 System Admin <br> U-SI3 Storage/File Services | Administer Active Directory, VM/server patching, file servers, and backups |
+| **IT-4 Voice & Collaboration Services** | U-VC1 VoIP/PBX <br> U-VC2 Conferencing <br> U-VC3 Call Center Ops | Operate corporate telephony, conferencing tools, and voice recording infrastructure |
+| **IT-5 Asset & Procurement** | U-AP1 Procurement <br> U-AP2 Inventory <br> U-AP3 License Management | Manage IT procurement, maintain accurate inventory, and oversee software licensing |
+
+---
+
+### Summary Table
+
+| Team | Description |
+|------|-------------|
+| **IT-1 Service Desk & Endpoint Support** | Provides support for devices and helpdesk tickets to ensure endpoint readiness. |
+| **IT-2 Enterprise Network Services** | Operates and monitors the LAN/WAN networking and structured cabling environment. |
+| **IT-3 Systems & Identity Administration** | Maintains identity and access systems, server health, and backup services. |
+| **IT-4 Voice & Collaboration Services** | Manages voice infrastructure, conferencing platforms, and internal communications. |
+| **IT-5 Asset & Procurement** | Handles purchasing, inventory, and license tracking of corporate IT resources. |
+
+---
+
+### **I – Team Tree View**
+
+```
+1I - Corporate IT & End-User Services
+│
+├─ IT-1 Service Desk & Endpoint Support
+│   ├─ U-SD1 Ticket Triage & Remote Support
+│   ├─ U-SD2 MDM Provisioning (Intune/Jamf)
+│   ├─ U-SD3 Knowledge Base
+│   ├─ Tasks:
+│   │   ├─ L1/L2 Ticket Response
+│   │   ├─ Device Provisioning w/ Golden Image
+│   │   └─ Weekly Patch & RMA Management
+│
+├─ IT-2 Enterprise Network Services
+│   ├─ U-NN1 LAN & Wireless
+│   ├─ U-NN2 WAN & ISP
+│   ├─ U-NN3 Cabling & Ports
+│   ├─ Tasks:
+│   │   ├─ Switch/Wi-Fi Backbone
+│   │   ├─ Internet Bandwidth Monitoring
+│   │   └─ Cabling Maintenance
+│
+├─ IT-3 Systems & Identity Administration
+│   ├─ U-SI1 AD/SSO/MFA
+│   ├─ U-SI2 Server & VM Admin
+│   ├─ U-SI3 File & Storage Services
+│   ├─ Tasks:
+│   │   ├─ AD/SSO/MFA Policy
+│   │   ├─ Server Hardening & Patch
+│   │   └─ Backup/DR Implementation
+│
+├─ IT-4 Voice & Collaboration Services
+│   ├─ U-VC1 VoIP & PBX
+│   ├─ U-VC2 Conferencing (Teams/Zoom)
+│   ├─ U-VC3 Call Center Ops
+│   ├─ Tasks:
+│   │   ├─ IVR, Queueing & Call Setup
+│   │   ├─ Conferencing Tools & Licenses
+│   │   └─ QoS Monitoring & Reporting
+│
+└─ IT-5 Asset & Procurement
+    ├─ U-AP1 Procurement & Vendor Contracts
+    ├─ U-AP2 Inventory & Warehousing
+    ├─ U-AP3 License Management
+    ├─ Tasks:
+    │   ├─ IT Purchasing Workflow
+    │   ├─ Inventory + Barcode Tracking
+    │   └─ License CMDB Accuracy
+```
 
