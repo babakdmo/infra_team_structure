@@ -557,20 +557,20 @@ This team keeps systems running smoothly. They track system health, respond to p
 └─ G-4 Efficiency Engineering
 ```
 
-### What This Team Does:
+### What This Team Does
 
-This team is responsible for optimizing financial efficiency, managing infrastructure budgets, projecting future capacity needs, and engineering cost-effective scaling mechanisms. They align technical capacity planning with financial strategies to ensure scalable, affordable infrastructure growth.
+This team manages the cost and growth of the infrastructure. They track cloud spending, manage budgets, plan future needs, and use automation to save money.
 
 ---
 
 ### 🔧 Team Details
 
-| Team | Sub-Teams | What They Do |
-|------|-----------|--------------|
-| **G-1 Cost Analytics** | U-FA1 Kubecost <br> U-FA2 CloudHealth | Monitor and analyze cost data, enforce pre-deployment tagging policies for cost visibility |
-| **G-2 Budget Governance** | U-BG1 CapEx Board <br> U-BG2 Charge-Back | Manage budget exposure via APIs, automate reporting with bots, and govern budget limits |
-| **G-3 Capacity Modelling** | U-CM1 Prophet Forecast <br> U-CM2 Scenario Planning | Forecast infrastructure needs for long-term planning and optimize spot market purchases |
-| **G-4 Efficiency Engineering** | U-EE1 Spot Pool <br> U-EE2 Autoscaler | Engineer autoscaling and rightsizing strategies using spot market and automation tools |
+| Team | Scope | What They Do |
+|------|-------|--------------|
+| **G-1 Cost Analytics** | Cloud Costs, Tagging Rules | Watch where money is spent, make sure deployments are tagged to track costs clearly |
+| **G-2 Budget Governance** | Budgets, Reports, Slack Bots | Manage spending limits, build budget dashboards and reporting tools |
+| **G-3 Capacity Modelling** | Forecasts, Spot Planning | Predict future infrastructure needs and plan spot instance usage |
+| **G-4 Efficiency Engineering** | Autoscaling, Spot Pools | Build smart scaling tools to save money using automation and spot instances |
 
 ---
 
@@ -578,10 +578,10 @@ This team is responsible for optimizing financial efficiency, managing infrastru
 
 | Team | Description |
 |------|-------------|
-| **G-1 Cost Analytics** | Provides cost visibility and policy enforcement via tools like Kubecost and CloudHealth. |
-| **G-2 Budget Governance** | Establishes budget policies and implements financial observability with Slack and APIs. |
-| **G-3 Capacity Modelling** | Builds long-term infrastructure forecasts and spot usage strategies with ML-based planners. |
-| **G-4 Efficiency Engineering** | Automates cost-efficient scaling and resource optimization with autoscalers and spot pools. |
+| **G-1 Cost Analytics** | Tracks cloud costs and improves cost visibility using tagging tools. |
+| **G-2 Budget Governance** | Manages budgets, sends updates via Slack, and automates cost tracking. |
+| **G-3 Capacity Modelling** | Forecasts future needs and plans smart usage of cheaper compute resources. |
+| **G-4 Efficiency Engineering** | Builds autoscalers and rightsizing tools to optimize usage and save cost. |
 
 ---
 
@@ -591,33 +591,37 @@ This team is responsible for optimizing financial efficiency, managing infrastru
 1G - FinOps & Capacity Engineering
 │
 ├─ G-1 Cost Analytics
-│   ├─ U-FA1 Kubecost
-│   ├─ U-FA2 CloudHealth
+│   ├─ Scope:
+│   │   ├─ Kubecost
+│   │   ├─ CloudHealth
 │   ├─ Tasks:
-│   │   └─ Enforce "Tag-before-Deploy" in Argo-CD
+│   │   └─ Tag-before-Deploy enforcement in Argo-CD
 │
 ├─ G-2 Budget Governance
-│   ├─ U-BG1 CapEx Board
-│   ├─ U-BG2 Charge-Back
+│   ├─ Scope:
+│   │   ├─ CapEx Planning
+│   │   ├─ Cost API & Slack Bots
 │   ├─ Tasks:
-│   │   ├─ Budget API
-│   │   └─ /cost-breakdown Slack Bot
+│   │   ├─ Manage budget via APIs
+│   │   └─ Send reports using Slack
 │
 ├─ G-3 Capacity Modelling
-│   ├─ U-CM1 Prophet Forecast
-│   ├─ U-CM2 Scenario Planning
+│   ├─ Scope:
+│   │   ├─ Forecasting (Prophet)
+│   │   ├─ Planning Scenarios
 │   ├─ Tasks:
-│   │   ├─ 3-Year DC Expansion Plan
-│   │   └─ Spot Market Plan
+│   │   ├─ Plan 3-year capacity
+│   │   └─ Use spot market data
 │
 └─ G-4 Efficiency Engineering
-    ├─ U-EE1 Spot Pool
-    ├─ U-EE2 Autoscaler
+    ├─ Scope:
+    │   ├─ Spot Pool Usage
+    │   ├─ Autoscaling Strategies
     ├─ Tasks:
-    │   ├─ Spot Coverage Monitoring
-    │   └─ Rightsizing Automation
+    │   ├─ Monitor spot usage
+    │   └─ Automate instance rightsizing
 ```
-
+---
 # **H – Product, UX & Customer-Success Division**
 
 ```
@@ -630,21 +634,21 @@ This team is responsible for optimizing financial efficiency, managing infrastru
 └─ H-5 Customer-Success & Support
 ```
 
-### What This Team Does:
+### What This Team Does
 
-This division bridges product direction with user needs, go-to-market strategies, customer success, and experience design. It drives roadmap alignment, adoption analytics, pricing strategies, documentation, and onboarding efforts across internal and external stakeholders.
+This team connects products with users. They plan product features, test what works, set prices, improve user experience, and help customers succeed with training and support.
 
 ---
 
 ### 🔧 Team Details
 
-| Team | Sub-Teams | What They Do |
-|------|-----------|--------------|
-| **H-1 Product Strategy & Road-mapping** | U-PS1 Market/User Research <br> U-PS2 Opportunity Backlog (Lean Canvas) | Conduct user interviews, analyze competitive markets, maintain quarterly product roadmaps |
-| **H-2 Product-Ops & Analytics** | U-PO1 KPI Instrumentation <br> U-PO2 Growth Experiments | Define product metrics, run experiments, and build feature-level ROI insights |
-| **H-3 Pricing, Packaging & GTM** | U-PP1 Pricing Model <br> U-PP2 Contracts & SLA | Define pricing plans, maintain SLAs, collaborate on business models with Sales/Finance |
-| **H-4 UX Research & DevRel** | U-UX1 Journey Mapping <br> U-DR1 Developer Advocacy | Run UX research, write documentation and articles, support the developer community |
-| **H-5 Customer-Success & Support** | U-CS1 Onboarding <br> U-CS2 Technical Account Mgmt. (TAM) | Provide support and training for internal and external product users |
+| Team | Scope | What They Do |
+|------|-------|--------------|
+| **H-1 Product Strategy & Road-mapping** | Research, Planning | Talk to users, study the market, and create product plans every quarter |
+| **H-2 Product-Ops & Analytics** | Metrics, Experiments | Track how products are used, run A/B tests, and measure what brings value |
+| **H-3 Pricing, Packaging & GTM** | Pricing Plans, SLAs | Decide on pricing, manage contracts, and work with Sales and Finance |
+| **H-4 UX Research & DevRel** | Usability, Docs, Advocacy | Improve how easy products are to use, write guides, and support developers |
+| **H-5 Customer-Success & Support** | Onboarding, Support | Train users and solve issues through tickets and direct support |
 
 ---
 
@@ -652,11 +656,11 @@ This division bridges product direction with user needs, go-to-market strategies
 
 | Team | Description |
 |------|-------------|
-| **H-1 Product Strategy & Road-mapping** | Guides product direction through market research and stakeholder feedback. |
-| **H-2 Product-Ops & Analytics** | Measures success metrics and runs A/B tests for growth and retention. |
-| **H-3 Pricing, Packaging & GTM** | Designs pricing models and works with business units to maintain profitability. |
-| **H-4 UX Research & DevRel** | Improves developer/user experience and provides learning resources. |
-| **H-5 Customer-Success & Support** | Supports onboarding, training, and issue resolution for product users. |
+| **H-1 Product Strategy & Road-mapping** | Builds the product direction using user input and market analysis. |
+| **H-2 Product-Ops & Analytics** | Tracks product usage and tests ideas for growth. |
+| **H-3 Pricing, Packaging & GTM** | Sets prices and handles business contracts and revenue models. |
+| **H-4 UX Research & DevRel** | Improves the product experience and supports developers with examples and guides. |
+| **H-5 Customer-Success & Support** | Helps customers get started and solves their problems quickly. |
 
 ---
 
@@ -666,44 +670,55 @@ This division bridges product direction with user needs, go-to-market strategies
 1H - Product, UX & Customer-Success Division
 │
 ├─ H-1 Product Strategy & Road-mapping
-│   ├─ U-PS1 Market/User Research
-│   ├─ U-PS2 Opportunity Backlog
+│   ├─ Scope:
+│   │   ├─ User Interviews
+│   │   ├─ Market Analysis
+│   │   ├─ Roadmap Creation
 │   ├─ Tasks:
-│   │   ├─ Monthly User Interviews
-│   │   ├─ Competitive/TAM Analysis
-│   │   └─ Quarterly Roadmaps
+│   │   ├─ Talk to 8+ users per month
+│   │   ├─ Analyze competitors
+│   │   └─ Publish roadmap every 3 months
 │
 ├─ H-2 Product-Ops & Analytics
-│   ├─ U-PO1 KPI Instrumentation
-│   ├─ U-PO2 Growth Experiments
-│   ├─ Tasks:
-│   │   ├─ Adoption & Churn Metrics
+│   ├─ Scope:
+│   │   ├─ Product Metrics
 │   │   ├─ A/B Testing
-│   │   └─ ROI Models
+│   │   ├─ ROI Models
+│   ├─ Tasks:
+│   │   ├─ Track adoption and churn
+│   │   ├─ Run growth experiments
+│   │   └─ Measure feature value
 │
 ├─ H-3 Pricing, Packaging & GTM
-│   ├─ U-PP1 Pricing Model
-│   ├─ U-PP2 Contracts & SLA
+│   ├─ Scope:
+│   │   ├─ Pricing Models
+│   │   ├─ Contracts & SLAs
 │   ├─ Tasks:
-│   │   ├─ Free vs. Premium Plans
-│   │   ├─ Legal DPA/SLA
-│   │   └─ Sales/Finance Collab for P&L
+│   │   ├─ Define Free vs. Paid tiers
+│   │   ├─ Work on legal SLAs
+│   │   └─ Coordinate with sales/finance
 │
 ├─ H-4 UX Research & DevRel
-│   ├─ U-UX1 Journey Mapping
-│   ├─ U-DR1 Developer Advocacy
+│   ├─ Scope:
+│   │   ├─ Usability Testing
+│   │   ├─ Docs and Tutorials
+│   │   ├─ Developer Support
 │   ├─ Tasks:
-│   │   ├─ Backstage Usability Testing
-│   │   ├─ Docs, Sample Code, Talks
+│   │   ├─ Test new features with users
+│   │   ├─ Write sample code and articles
+│   │   └─ Attend dev meetups
 │
 └─ H-5 Customer-Success & Support
-    ├─ U-CS1 Onboarding
-    ├─ U-CS2 Technical Account Mgmt. (TAM)
+    ├─ Scope:
+    │   ├─ Onboarding Programs
+    │   ├─ Support Tickets
+    │   ├─ Training and Help
     ├─ Tasks:
-    │   ├─ Ticket SLA (L1/L2)
-    │   └─ Enablement Training
+    │   ├─ Respond to user tickets
+    │   ├─ Deliver team training
+    │   └─ Track response and resolution times
 ```
-
+---
 # **I – Corporate IT & End-User Services**
 
 ```
@@ -716,21 +731,21 @@ This division bridges product direction with user needs, go-to-market strategies
 └─ IT-5 Asset & Procurement
 ```
 
-### What This Team Does:
+### What This Team Does
 
-This team supports the enterprise’s technology backbone for internal users. They handle everything from helpdesk tickets and device provisioning to network operations, identity systems, voice services, and IT procurement. They ensure employees are well-supported, connected, and securely provisioned.
+This team provides all the IT support employees need to do their work smoothly. They manage helpdesk tickets, laptops and devices, company networks, user logins (AD/SSO/MFA), voice services like phones and video calls, and IT equipment purchases.
 
 ---
 
 ### 🔧 Team Details
 
-| Team | Sub-Teams | What They Do |
-|------|-----------|--------------|
-| **IT-1 Service Desk & Endpoint Support** | U-SD1 Ticket Triage <br> U-SD2 MDM Provisioning <br> U-SD3 Knowledge Base | Resolve helpdesk tickets, manage endpoint devices, maintain knowledge articles |
-| **IT-2 Enterprise Network Services** | U-NN1 LAN & Wi-Fi <br> U-NN2 WAN & ISP <br> U-NN3 Cabling | Maintain campus and WAN networking infrastructure, ISP liaison, structured cabling |
-| **IT-3 Systems & Identity Administration** | U-SI1 AD/SSO/MFA <br> U-SI2 System Admin <br> U-SI3 Storage/File Services | Administer Active Directory, VM/server patching, file servers, and backups |
-| **IT-4 Voice & Collaboration Services** | U-VC1 VoIP/PBX <br> U-VC2 Conferencing <br> U-VC3 Call Center Ops | Operate corporate telephony, conferencing tools, and voice recording infrastructure |
-| **IT-5 Asset & Procurement** | U-AP1 Procurement <br> U-AP2 Inventory <br> U-AP3 License Management | Manage IT procurement, maintain accurate inventory, and oversee software licensing |
+| Team | Scope | What They Do |
+|------|-------|--------------|
+| **IT-1 Service Desk & Endpoint Support** | Helpdesk, Devices, Patching | Respond to support tickets, set up and fix laptops, push updates |
+| **IT-2 Enterprise Network Services** | LAN/Wi-Fi, Internet, Cabling | Run and fix office and WAN networks, monitor bandwidth, handle cabling |
+| **IT-3 Systems & Identity Administration** | AD/SSO/MFA, Servers, Backup | Manage logins and access (AD, SSO, MFA), patch servers, run backups |
+| **IT-4 Voice & Collaboration Services** | Phones, Zoom/Teams, Call Centers | Set up phones and video calls, manage call routing and call center tools |
+| **IT-5 Asset & Procurement** | Buying, Inventory, Licenses | Order equipment, track devices, and handle software license records |
 
 ---
 
@@ -738,11 +753,11 @@ This team supports the enterprise’s technology backbone for internal users. Th
 
 | Team | Description |
 |------|-------------|
-| **IT-1 Service Desk & Endpoint Support** | Provides support for devices and helpdesk tickets to ensure endpoint readiness. |
-| **IT-2 Enterprise Network Services** | Operates and monitors the LAN/WAN networking and structured cabling environment. |
-| **IT-3 Systems & Identity Administration** | Maintains identity and access systems, server health, and backup services. |
-| **IT-4 Voice & Collaboration Services** | Manages voice infrastructure, conferencing platforms, and internal communications. |
-| **IT-5 Asset & Procurement** | Handles purchasing, inventory, and license tracking of corporate IT resources. |
+| **IT-1 Service Desk & Endpoint Support** | Helps employees with devices and tickets, and keeps them patched. |
+| **IT-2 Enterprise Network Services** | Runs the company network infrastructure, both wired and wireless. |
+| **IT-3 Systems & Identity Administration** | Manages logins, server health, and safe storage and backups. |
+| **IT-4 Voice & Collaboration Services** | Handles all calling tools and video communication services. |
+| **IT-5 Asset & Procurement** | Tracks hardware and software and manages all IT purchases. |
 
 ---
 
@@ -752,48 +767,55 @@ This team supports the enterprise’s technology backbone for internal users. Th
 1I - Corporate IT & End-User Services
 │
 ├─ IT-1 Service Desk & Endpoint Support
-│   ├─ U-SD1 Ticket Triage & Remote Support
-│   ├─ U-SD2 MDM Provisioning (Intune/Jamf)
-│   ├─ U-SD3 Knowledge Base
+│   ├─ Scope:
+│   │   ├─ Ticket Support
+│   │   ├─ Device Setup
+│   │   ├─ Patch Management
 │   ├─ Tasks:
-│   │   ├─ L1/L2 Ticket Response
-│   │   ├─ Device Provisioning w/ Golden Image
-│   │   └─ Weekly Patch & RMA Management
+│   │   ├─ Respond to IT tickets (L1/L2)
+│   │   ├─ Set up and image devices
+│   │   └─ Push patches and track RMA
 │
 ├─ IT-2 Enterprise Network Services
-│   ├─ U-NN1 LAN & Wireless
-│   ├─ U-NN2 WAN & ISP
-│   ├─ U-NN3 Cabling & Ports
+│   ├─ Scope:
+│   │   ├─ LAN & Wi-Fi Access
+│   │   ├─ WAN & Internet Service
+│   │   ├─ Network Cabling
 │   ├─ Tasks:
-│   │   ├─ Switch/Wi-Fi Backbone
-│   │   ├─ Internet Bandwidth Monitoring
-│   │   └─ Cabling Maintenance
+│   │   ├─ Maintain switches and Wi-Fi
+│   │   ├─ Monitor ISP usage
+│   │   └─ Maintain physical network ports
 │
 ├─ IT-3 Systems & Identity Administration
-│   ├─ U-SI1 AD/SSO/MFA
-│   ├─ U-SI2 Server & VM Admin
-│   ├─ U-SI3 File & Storage Services
+│   ├─ Scope:
+│   │   ├─ Active Directory (AD)
+│   │   ├─ Single Sign-On (SSO)
+│   │   ├─ Multi-Factor Auth (MFA)
+│   │   ├─ Server Patching
+│   │   ├─ Storage & Backups
 │   ├─ Tasks:
-│   │   ├─ AD/SSO/MFA Policy
-│   │   ├─ Server Hardening & Patch
-│   │   └─ Backup/DR Implementation
+│   │   ├─ Apply login policies and MFA
+│   │   ├─ Harden and patch servers
+│   │   └─ Manage backups and restores
 │
 ├─ IT-4 Voice & Collaboration Services
-│   ├─ U-VC1 VoIP & PBX
-│   ├─ U-VC2 Conferencing (Teams/Zoom)
-│   ├─ U-VC3 Call Center Ops
+│   ├─ Scope:
+│   │   ├─ VoIP Phones & PBX
+│   │   ├─ Zoom/Teams Video
+│   │   ├─ Call Center Tools
 │   ├─ Tasks:
-│   │   ├─ IVR, Queueing & Call Setup
-│   │   ├─ Conferencing Tools & Licenses
-│   │   └─ QoS Monitoring & Reporting
+│   │   ├─ Set up voice menus and queues
+│   │   ├─ Manage conferencing tools
+│   │   └─ Track voice quality and usage
 │
 └─ IT-5 Asset & Procurement
-    ├─ U-AP1 Procurement & Vendor Contracts
-    ├─ U-AP2 Inventory & Warehousing
-    ├─ U-AP3 License Management
+    ├─ Scope:
+    │   ├─ Procurement Workflow
+    │   ├─ Hardware Inventory
+    │   ├─ License Tracking
     ├─ Tasks:
-    │   ├─ IT Purchasing Workflow
-    │   ├─ Inventory + Barcode Tracking
-    │   └─ License CMDB Accuracy
+    │   ├─ Order laptops and software
+    │   ├─ Track assets with barcodes
+    │   └─ Maintain software compliance
 ```
-
+---
