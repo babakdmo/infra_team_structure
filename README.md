@@ -1,3 +1,37 @@
+# **Data Infrastructure Team**
+
+## Team Structure Overview
+
+```
+Data Infrastructure Team
+├── Data Platform Team
+│   ├── HDFS, YARN, Spark, Airflow, Kafka, ZooKeeper
+│   ├── Helm-based deployments and upgrades
+│   ├── Kerberos integration and TLS
+│   └── Monitoring, Alerts, and Backup
+├── Data Engineering Team
+│   ├── Batch and stream ingestion (Lakehouse load)
+│   ├── PySpark and Spark SQL transformations
+│   ├── Airflow DAG orchestration with GitLab CI
+│   ├── Great Expectations + DataHub for lineage
+│   └── Auto-generation of data pipelines
+├── MLOps Team
+│   ├── Feature stores, MLflow, training pipelines (Ray, Kubeflow)
+│   ├── Model serving (Seldon, Triton, Ollama) with autoscaling
+│   ├── Monitoring and drift detection (Prometheus + Evidently)
+│   ├── LangChain, LlamaIndex, Haystack orchestration
+│   ├── LLM serving infrastructure (Ollama, vLLM, Triton)
+│   └── Expose unified agent & RAG APIs with prompt registry
+└── BI Services Team
+    ├── Semantic metrics with dbt Metrics / LookML
+    ├── Star schema and OLAP-wide tables on Lakehouse and StarRocks
+    ├── Trino, StarRocks infrastructure
+    ├── Superset/Looker dashboards, RLS embedding
+    ├── Redis caching, materialized views
+    └── Secondary pipelines + automated wide table generation
+```
+---
+
 # **Data Platform Team**
 
 ## 🧾 Team Summary
