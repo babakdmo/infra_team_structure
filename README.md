@@ -76,3 +76,69 @@
 | Setup Airflow with PostgreSQL backend and Git-based DAG sync | Airflow Helm Chart, GitSync |
 | Create PrometheusRule for HDFS under-replicated blocks and Slack alerts | Prometheus, Alertmanager |
 | Schedule daily Airflow metadata backup to S3 (MinIO) | Kubernetes CronJob, MinIO CSI |
+
+
+# **Data Engineering Team**
+
+## 🧾 Team Summary
+
+| Area | Responsibilities |
+|------|------------------|
+| **Scope** | Batch and stream ingestion into data lakehouses; first-class ETL/ELT transforms to storage cluster |
+| **Pipeline Types** | Batch and stream pipelines (PySpark + Spark SQL) for ingestion and pre-warehouse transformations |
+| **CI/CD** | GitLab CI for DAG validation, job tests, image builds, and GitOps deployment |
+| **Lineage & Metadata** | DataHub for column-level lineage, usage tracking, schema registry, and ownership tagging |
+| **Quality** | Great Expectations checks, freshness validation, SLA-based alerts |
+| **On-Call** | PagerDuty-based rotation for failure handling and SLA violations |
+
+---
+
+## 🔧 Owns:
+- Batch and stream ingestion jobs
+- PySpark & Spark SQL-based transformation pipelines
+- Airflow DAGs for orchestration
+- GitLab CI pipelines for continuous delivery
+- Great Expectations suites for validation
+- DataHub for end-to-end lineage and metadata
+- Lakehouse table formats (Iceberg) and catalogs (Hive Metastore, Nessie)
+
+---
+
+## 🧩 Core Responsibilities
+
+### 1. Batch & Stream Ingestion (Lakehouse Load)
+- Ingest ETL/ELT data from batch and stream sources directly into the data lakehouse.
+- Operate and maintain Kafka Connect clusters and Debezium connectors for real-time CDC.
+- Detect schema drift, log changes, and trigger upstream notifications via GitLab issues.
+
+### 2. First-Class Transformations
+- Use **PySpark** and **Spark SQL** to perform scalable, first-class transformations during ingestion.
+- Enrich, deduplicate, and validate data before it is written to Iceberg-based lakehouse tables.
+- Design and manage schema evolution and partitioning strategies in **Iceberg** using **Hive Metastore** and **Project Nessie** catalogs.
+
+### 3. Workflow Orchestration
+- Author robust **Apache Airflow DAGs** supporting backfills, SLAs, retries, branching, and parametrization.
+- Automate validation, testing, and deployment of pipelines using **GitLab CI** and **GitOps** practices.
+
+### 4. Data Quality & Lineage
+- Define and execute **Great Expectations** checks for completeness, accuracy, and business rules.
+- Use **DataHub** to register lineage and metadata from PySpark, Spark SQL, dbt, and Airflow pipelines.
+- Enforce structured metadata: ownership, sensitivity tagging, and field-level masking policies.
+
+### 5. Monitoring & SLA Enforcement
+- Track pipeline metrics like lag, freshness, and row volumes via **Prometheus**.
+- Trigger alerts using custom **PrometheusRules** and **Alertmanager** integrations.
+- Respond to incidents with a documented on-call process, runbooks, and postmortem workflows.
+
+---
+
+## 📋 Sample Subtasks
+
+| Subtask | Framework / Tool |
+|---------|-------------------|
+| Configure Kafka Connect for CDC streaming from Postgres | Kafka Connect, Debezium |
+| Build PySpark transformation for deduplicating and enriching product catalog | PySpark, Spark SQL |
+| Write transformed output as Iceberg tables with Hive/Nessie catalog | Iceberg, Hive Metastore, Nessie |
+| Define Great Expectations suite for validating null-free and non-negative metrics | Great Expectations |
+| Automate DAG container build and deploy via GitLab CI to Kubernetes | GitLab CI, Airflow |
+| Emit lineage metadata from Spark jobs and Airflow DAGs to DataHub | DataHub SDK, PySpark, Airflow |
