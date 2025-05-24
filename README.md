@@ -151,3 +151,78 @@
 | Automate DAG container build and deploy via GitLab CI to Kubernetes | GitLab CI, Airflow |
 | Emit lineage metadata from Spark jobs and Airflow DAGs to DataHub | DataHub SDK, PySpark, Airflow |
 | Generate new Spark pipeline from metadata using internal template engine | Python, Jinja2, GitLab CI |
+
+# **MLOps Team**
+
+## 🧾 Team Summary
+
+| Area | Responsibilities |
+|------|------------------|
+| **Scope** | Manage end-to-end ML lifecycle on Kubernetes: feature storage, training orchestration, registry, model serving, and drift monitoring |
+| **Pipeline Types** | Automated training and deployment workflows using Argo, Kubeflow, or Airflow |
+| **CI/CD** | GitLab CI for model validation, version control, image builds, and GitOps-based rollouts |
+| **Drift & Monitoring** | Prometheus and Evidently AI for drift detection, latency and error monitoring |
+| **Automation** | Auto-generation of ML pipelines using standardized templates and metadata inputs |
+| **Serving** | Inference deployments using Seldon Core, KFServing, or Triton Inference Server |
+| **On-Call** | PagerDuty-based support for pipeline failures, drift breaches, and incident response |
+
+---
+
+## 🔧 Owns:
+- Feature stores using Feast
+- Model tracking and registries using MLflow or Weights & Biases
+- Training orchestration using Argo Workflows, Kubeflow Pipelines, or Airflow
+- Distributed training using Ray
+- Model serving with Seldon Core, KFServing, or Triton Inference Server
+- Drift detection and inference monitoring
+- GitLab CI pipelines for automated training and deployment
+- Templates and tooling for pipeline auto-generation
+
+---
+
+## 🧩 Core Responsibilities
+
+### 1. Feature Store Management
+- Deploy and manage **Feast** on Kubernetes, supporting TTL, streaming joins, and batch backfills.
+- Ensure consistency between training and serving-time feature lookups.
+- Register, tag, and track feature usage across teams.
+
+### 2. Experiment Tracking & Model Registry
+- Operate **MLflow** or **Weights & Biases** as central model and metric repositories.
+- Enforce model evaluation thresholds using CI gates.
+- Promote models through lifecycle stages (`staging → validated → production`) using GitOps.
+
+### 3. Training Pipelines & Orchestration
+- Automate training pipelines using **Kubeflow Pipelines**, **Argo Workflows**, or **Apache Airflow**.
+- Utilize **Ray** for distributed training with autoscaling GPU-enabled clusters.
+- Chain steps for preprocessing, training, evaluation, containerization, and registry upload.
+
+### 4. Serving & Deployment
+- Deploy models using **Seldon Core**, **KFServing**, or **Triton Inference Server**.
+- Define and execute canary, shadow, and blue-green rollouts with **Istio** routing.
+- Enforce inference endpoint security via API key authentication or Role-Level Security (RLS).
+
+### 5. Monitoring & Drift Detection
+- Track prediction latency, error rates, and feature drift with **Prometheus** and **Evidently AI**.
+- Send drift alerts to **Grafana** dashboards or trigger retraining workflows via automation.
+- Define SLA metrics and observability rules for inference behavior.
+
+### 6. Automated Pipeline Generation
+- Enable generation of training and deployment pipelines from configuration metadata.
+- Use internal templates and declarative YAML to scaffold pipelines dynamically.
+- Integrate pipeline generation with GitLab CI and internal developer tooling.
+
+---
+
+## 📋 Sample Subtasks
+
+| Subtask | Framework / Tool |
+|---------|-------------------|
+| Deploy Feast Core and register “user_age” feature with TTL 24h | Feast, Kubernetes Operator |
+| Configure MLflow server with backend store and GitLab CI model threshold check | MLflow, GitLab CI |
+| Build distributed Ray training job triggered by Argo Workflow | Ray, Argo Workflows |
+| Serve TensorFlow model via Triton Inference Server with autoscaling | Triton Server, Kubernetes |
+| Setup Evidently monitor for drift on "transaction_amount" and notify Grafana | Evidently AI, Prometheus, Grafana |
+| Auto-generate Kubeflow pipeline from metadata and deploy via GitLab CI | Python, Jinja2, GitLab CI, Kubeflow |
+
+
