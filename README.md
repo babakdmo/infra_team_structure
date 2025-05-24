@@ -239,3 +239,88 @@
 | Auto-generate Kubeflow pipeline from metadata and deploy via GitLab CI | Python, Jinja2, GitLab CI, Kubeflow |
 | Wrap LangChain agent and expose as REST endpoint with trace logging | LangChain, FastAPI, OpenTelemetry |
 | Create REST and gRPC RAG APIs and agent interfaces to enable usage of LLM-based agents | LangChain, Haystack, LlamaIndex, Ollama |
+
+---
+
+# **BI Services Team (Infra-Level)**
+
+## 🧾 Team Summary
+
+| Area | Responsibilities |
+|------|------------------|
+| **Scope** | Manage data modeling, data warehouse architecture, OLAP-wide tables, semantic layers, dashboard platforms, and query infrastructure |
+| **Modeling & Warehousing** | Design dimensional models, wide tables, and materialized layers on Lakehouse and OLAP |
+| **Secondary Pipelines** | Build and automate pipelines that consume ETL outputs and populate BI models |
+| **OLAP & Query Engines** | Operate Trino and StarRocks for low-latency, high-concurrency analytics |
+| **Semantic Layer** | Define and manage metrics using dbt Metrics|
+| **Dashboards** | Maintain and optimize Superset; Add new features |
+| **Automation** | Automate secondary pipeline |
+
+---
+
+## 🔧 Owns:
+- Data modeling and data warehouse design on the Lakehouse
+- Creation of wide and aggregated OLAP tables using StarRocks
+- Materialized view orchestration and refresh logic using Airflow
+- Semantic metrics definitions using dbt Metrics
+- Trino and StarRocks infrastructure and configuration
+- dashboard delivery via Superset
+- Dashboard performance monitoring, query optimization, and SLA enforcement
+- Secondary pipelines for transforming curated ETL outputs into BI tables
+- Tooling for auto-generating dashboard-ready data models and pipelines
+
+---
+
+## 🧩 Core Responsibilities
+
+### 1. Data Modeling & Warehouse Architecture
+- Design and maintain curated dimensional models in the Lakehouse (Iceberg).
+- Develop OLAP-wide tables and aggregates in **StarRocks**.
+- Version-control schemas and enforce compatibility via CI pipelines.
+
+### 2. Semantic Layer & Metrics APIs
+- Define **dbt Metrics** layers to standardize KPIs across the organization.
+- Expose metrics through SQL and RESTful APIs to internal data consumers.
+- Maintain backward compatibility and test business logic in metrics pipelines.
+
+### 3. Secondary BI Pipelines
+- Build and orchestrate pipelines that consume curated ETL output and produce:
+  - Fact and dimension tables in the Lakehouse
+  - OLAP-friendly wide tables and pre-aggregates in StarRocks
+- Automate pipeline generation using YAML-based metadata and Jinja templates.
+
+### 4. OLAP & Query Engines
+- Deploy and tune **Trino** and **StarRocks** on Kubernetes.
+- Manage compute resources, query memory, worker pools, and parallelism for concurrency.
+- Optimize long-tail and hot-path queries using materialized layers and storage indexes.
+
+### 5. Dashboarding Platforms & Embedding
+- Maintain **Superset** platform; handle upgrades, auth, and scale.
+- Implement row-level security (RLS) in dashboards and SDKs.
+- Develop and publish JavaScript SDKs to embed dashboards in portals.
+- Optimize chart rendering, data sources, and default filters for speed.
+
+### 6. Caching & Materializations
+- Implement **StarRocks materialized views** for low-latency reporting.
+- Schedule refreshes based on upstream data events or timestamps.
+- Monitor freshness SLAs for high-priority reports and visuals.
+
+### 7. Monitoring & Performance Auditing
+- Monitor BI workloads (query latency, memory, slow queries) using Prometheus and Grafana.
+- Run weekly audits and apply optimizations (joins, indexes, filter pushdowns).
+- Maintain visual performance benchmarks and SLA dashboards.
+
+---
+
+## 📋 Sample Subtasks
+
+| Subtask | Framework / Tool |
+|---------|-------------------|
+| Design a star schema in the Lakehouse and version it in dbt repo | dbt-core, Iceberg, GitLab |
+| Build OLAP-wide sales aggregate table using StarRocks materialized view | StarRocks |
+| Define “Monthly Active Users” metric using dbt Metrics and validate with tests | dbt Metrics |
+| Create Redis cache layer in front of Trino for hot dashboard tables | Redis, Helm |
+| Automate secondary pipeline YAML to generate wide table DAGs | Python, Jinja2, Airflow, GitLab CI |
+| Publish Superset embedding SDK with RLS token support and CI versioning | Superset, JS SDK, Artifactory |
+| Deploy and configure Trino with autoscaling worker pool on Kubernetes | Trino Operator, K8s HPA |
+| Run weekly slow-query audit on StarRocks and tune joins and indexes | StarRocks, Prometheus, Grafana |
