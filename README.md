@@ -23,7 +23,7 @@ Data Infrastructure Team
 │   ├── LLM serving infrastructure (Ollama, vLLM, Triton)
 │   └── Expose unified agent & RAG APIs with prompt registry
 └── BI Services Team
-    ├── Semantic metrics with dbt Metrics / LookML
+    ├── Semantic metrics with dbt Metrics
     ├── Star schema and OLAP-wide tables on Lakehouse and StarRocks
     ├── Trino, StarRocks infrastructure
     ├── Superset/Looker dashboards, RLS embedding
