@@ -77,7 +77,8 @@
 | Create PrometheusRule for HDFS under-replicated blocks and Slack alerts | Prometheus, Alertmanager |
 | Schedule daily Airflow metadata backup to S3 (MinIO) | Kubernetes CronJob, MinIO CSI |
 
-
+--- 
+---
 # **Data Engineering Team**
 
 ## 🧾 Team Summary
@@ -89,6 +90,7 @@
 | **CI/CD** | GitLab CI for DAG validation, job tests, image builds, and GitOps deployment |
 | **Lineage & Metadata** | DataHub for column-level lineage, usage tracking, schema registry, and ownership tagging |
 | **Quality** | Great Expectations checks, freshness validation, SLA-based alerts |
+| **Automation** | Auto-generation of batch and streaming pipelines using standardized templates and metadata |
 | **On-Call** | PagerDuty-based rotation for failure handling and SLA violations |
 
 ---
@@ -101,6 +103,7 @@
 - Great Expectations suites for validation
 - DataHub for end-to-end lineage and metadata
 - Lakehouse table formats (Iceberg) and catalogs (Hive Metastore, Nessie)
+- Pipeline generation tooling and automation logic
 
 ---
 
@@ -130,6 +133,11 @@
 - Trigger alerts using custom **PrometheusRules** and **Alertmanager** integrations.
 - Respond to incidents with a documented on-call process, runbooks, and postmortem workflows.
 
+### 6. Automated Pipeline Generation
+- Develop tooling for automatic generation of PySpark and Spark SQL batch/stream pipelines based on metadata, templates, and config files.
+- Standardize ingestion and transformation logic for repeatable use across domains.
+- Integrate generation logic into GitLab CI workflows and expose via internal developer platform APIs.
+
 ---
 
 ## 📋 Sample Subtasks
@@ -142,3 +150,4 @@
 | Define Great Expectations suite for validating null-free and non-negative metrics | Great Expectations |
 | Automate DAG container build and deploy via GitLab CI to Kubernetes | GitLab CI, Airflow |
 | Emit lineage metadata from Spark jobs and Airflow DAGs to DataHub | DataHub SDK, PySpark, Airflow |
+| Generate new Spark pipeline from metadata using internal template engine | Python, Jinja2, GitLab CI |
