@@ -267,34 +267,33 @@ This team helps developers move from writing code to getting it running in produ
     │   └─ Provide one-click rollbacks
 ```
 ---
-
 # **D – Data & AI Infrastructure**
 
 ```
 1D - Data & AI Infrastructure
 │
 ├─ D-1 Data Platform
-├─ D-2 Data Engineering (Lakehouse & Pipelines)
+├─ D-2 Data Engineering (Lakehouse & First-Class Pipelines)
 ├─ D-3 ML & AI Platform
 ├─ D-4 Governance & Observability
 └─ D-5 BI & Semantic Services
 ```
 
-### What This Team Does:
+### What This Team Does
 
-This team provides the full data and AI backbone. They manage data clusters, process batch and streaming pipelines, support AI training and serving, enforce data governance, and build BI-friendly models and metrics.
+This team builds and runs everything needed for working with data and AI. They manage big data systems, run data pipelines, support machine learning, enforce privacy rules, and prepare data for reports and dashboards.
 
 ---
 
 ### 🔧 Team Details
 
-| Team | Sub-Teams | What They Do |
-|------|-----------|--------------|
-| **D-1 Data Platform** | U-DP1 Hadoop Cluster Ops (HDFS + YARN) <br> U-DP2 Spark & Trino Engines <br> U-DP3 Kafka Backbone | Maintain data clusters, manage Spark & Trino engines, and operate Kafka for real-time data |
-| **D-2 Data Engineering (Lakehouse & Pipelines)** | U-DE1 Lakehouse Ops (Iceberg Catalog) <br> U-DE2 Batch Pipelines (dbt + PySpark) <br> U-DE3 Realtime Pipelines (Flink SQL) | Build and maintain batch and real-time data pipelines and manage data lake schemas |
-| **D-3 ML & AI Platform** | U-ML1 Feature Store (Feast) <br> U-ML2 Training (Kubeflow, Ray) <br> U-ML3 Serving (MLflow, Seldon) | Run AI training pipelines, manage features, and deploy models into production |
-| **D-4 Governance & Observability** | U-GV1 Metadata Catalog (Atlas) <br> U-GV2 Lineage & DQ (OpenLineage + Soda) <br> U-GV3 Privacy (Ranger, Mask) | Track data lineage, ensure data quality, and apply privacy policies |
-| **D-5 BI & Semantic Services** | U-BI1 Data Modeling & Pipeline Dev <br> U-BI2 Wide-Table & Aggregation Store <br> U-BI3 Metric Layer & Query Acceleration | Build BI data models, create materialized views, and optimize dashboard performance |
+| Team | Scope | What They Do |
+|------|-------|--------------|
+| **D-1 Data Platform** | Hadoop, Spark, Trino, Kafka | Run big data systems for storing, processing, and streaming data |
+| **D-2 Data Engineering** | Lakehouse (Iceberg), First-Class Pipelines | Build core data pipelines that move and transform data in batch and real-time |
+| **D-3 ML & AI Platform** | ML Training, Feature Store, Model Serving | Train models, manage features, and serve models into applications |
+| **D-4 Governance & Observability** | Metadata, Lineage, Privacy Rules | Track data use, check data quality, and apply privacy protections |
+| **D-5 BI & Semantic Services** | Data Warehouse, OLAP Tables, Dashboards | Manage data warehouse and OLAP wide tables, prepare data models and pipeline outputs for BI dashboards |
 
 ---
 
@@ -302,11 +301,11 @@ This team provides the full data and AI backbone. They manage data clusters, pro
 
 | Team | Description |
 |------|-------------|
-| **D-1 Data Platform** | Operates data processing engines and messaging systems at scale. |
-| **D-2 Data Engineering** | Designs and runs batch and real-time pipelines in the data lakehouse. |
-| **D-3 ML & AI Platform** | Manages ML pipelines from feature generation to live model serving. |
-| **D-4 Governance & Observability** | Governs data security, privacy, metadata, and observability. |
-| **D-5 BI & Semantic Services** | Prepares data for analytics with semantic layers, pipelines, and indexes. |
+| **D-1 Data Platform** | Runs big data clusters and tools for processing and streaming data. |
+| **D-2 Data Engineering** | Creates first-class pipelines for moving and transforming information. |
+| **D-3 ML & AI Platform** | Supports AI workflows from training to live model use. |
+| **D-4 Governance & Observability** | Tracks and protects data, and checks its quality. |
+| **D-5 BI & Semantic Services** | Prepares data through pipelines and wide tables for BI and OLAP dashboards. |
 
 ---
 
@@ -316,50 +315,58 @@ This team provides the full data and AI backbone. They manage data clusters, pro
 1D - Data & AI Infrastructure
 │
 ├─ D-1 Data Platform
-│   ├─ U-DP1 Hadoop Cluster Ops (HDFS + YARN)
-│   ├─ U-DP2 Spark & Trino Engines
-│   ├─ U-DP3 Kafka Backbone
+│   ├─ Scope:
+│   │   ├─ Hadoop Cluster
+│   │   ├─ Spark & Trino Engines
+│   │   ├─ Kafka Streaming
 │   ├─ Tasks:
-│   │   ├─ Setup and upgrade clusters
-│   │   ├─ Maintain high availability
-│   │   └─ Manage streaming backbone
+│   │   ├─ Set up and upgrade clusters
+│   │   ├─ Keep systems highly available
+│   │   └─ Manage real-time data flow
 │
-├─ D-2 Data Engineering (Lakehouse & Pipelines)
-│   ├─ U-DE1 Lakehouse Ops (Iceberg Catalog)
-│   ├─ U-DE2 Batch Pipelines (dbt + PySpark)
-│   ├─ U-DE3 Realtime Pipelines (Flink SQL)
+├─ D-2 Data Engineering (Lakehouse & First-Class Pipelines)
+│   ├─ Scope:
+│   │   ├─ Iceberg Lakehouse
+│   │   ├─ Batch Pipelines (dbt, PySpark)
+│   │   ├─ Realtime Pipelines (Flink SQL)
 │   ├─ Tasks:
-│   │   ├─ Define Iceberg schemas
-│   │   ├─ Run ETL pipelines
-│   │   └─ Process real-time data
+│   │   ├─ Define and manage data schemas
+│   │   ├─ Build and run core ETL jobs
+│   │   └─ Handle real-time data streams
 │
 ├─ D-3 ML & AI Platform
-│   ├─ U-ML1 Feature Store (Feast)
-│   ├─ U-ML2 Training (Kubeflow, Ray)
-│   ├─ U-ML3 Serving (MLflow, Seldon)
+│   ├─ Scope:
+│   │   ├─ Feature Store (Feast)
+│   │   ├─ Training Systems (Kubeflow, Ray)
+│   │   ├─ Model Deployment (MLflow, Seldon)
 │   ├─ Tasks:
-│   │   ├─ Manage training jobs
-│   │   ├─ Track model features
-│   │   └─ Serve models in production
+│   │   ├─ Run model training jobs
+│   │   ├─ Manage and store features
+│   │   └─ Deploy and serve models
 │
 ├─ D-4 Governance & Observability
-│   ├─ U-GV1 Metadata Catalog (Atlas)
-│   ├─ U-GV2 Lineage & DQ (OpenLineage, SodaSQL)
-│   ├─ U-GV3 Privacy (Ranger, Mask)
+│   ├─ Scope:
+│   │   ├─ Metadata Catalog (Atlas)
+│   │   ├─ Data Lineage & Quality (OpenLineage, Soda)
+│   │   ├─ Privacy Controls (Ranger, Masking)
 │   ├─ Tasks:
-│   │   ├─ Maintain metadata and lineage
-│   │   ├─ Run data quality checks
-│   │   └─ Apply masking and privacy rules
+│   │   ├─ Maintain metadata and track usage
+│   │   ├─ Run checks to ensure clean data
+│   │   └─ Apply privacy and masking rules
 │
 └─ D-5 BI & Semantic Services
-    ├─ U-BI1 Data Modeling & Pipeline Dev
-    ├─ U-BI2 Wide-Table & Aggregation Store
-    ├─ U-BI3 Metric Layer & Query Acceleration
+    ├─ Scope:
+    │   ├─ Data Modeling & Pipelines
+    │   ├─ Wide Tables & Aggregations
+    │   ├─ Metrics & Query Performance
+    │   ├─ OLAP Dashboards
     ├─ Tasks:
-    │   ├─ Create and document data models
-    │   ├─ Build and refresh wide-table snapshots
-    │   └─ Maintain semantic and metric layers
+    │   ├─ Build reusable data models
+    │   ├─ Create snapshot tables
+    │   ├─ Manage data warehouse and OLAP tables
+    │   └─ Speed up BI dashboards
 ```
+---
 
 
 # **E – Security, Privacy & Compliance**
