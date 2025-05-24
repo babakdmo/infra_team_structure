@@ -42,7 +42,7 @@ Data Infrastructure Team
 | **Deployment & Upgrades** | Helm charts, Operators, rolling upgrades for zero downtime |
 | **Configuration** | JVM tuning, Spark executor resources, Airflow concurrency |
 | **Security** | FreeIPA/Kerberos integration, TLS certificates, NetworkPolicies |
-| **Monitoring** | Prometheus, Grafana, Loki, custom alerts |
+| **Monitoring** | Prometheus, Grafana, custom alerts |
 | **Backup & DR** | Snapshots, failover scripts, disaster recovery testing |
 
 ---
