@@ -182,7 +182,7 @@ This area provides the basic compute, storage, and networking services for all p
     │   └─ Roll out features gradually
 ```
 ---
-# **1C – Platform Engineering & Developer Experience**
+# **C – Platform Engineering & Developer Experience**
 
 ```
 1C - Platform Engineering & Developer Experience
@@ -193,78 +193,81 @@ This area provides the basic compute, storage, and networking services for all p
 └─ C-5 Release Engineering
 ```
 
-## What This Area Does
+### What This Area Does
 
-Platform Engineering & DevEx gives every developer a smooth path from the first `git init` to a production roll‑out.  
-It hosts the internal developer portal, shapes build and deploy pipelines, provides local and shared Kubernetes environments, and runs a predictable release train with instant rollbacks.
-
----
-
-## 🔧 Team Details
-
-| Team | Sub‑Units | What They Do |
-|------|-----------|--------------|
-| **C‑1 IDP Core & Self‑Service** | U‑P1 Software Catalog <br> U‑P2 Golden‑Path Scaffolder <br> U‑P3 Dev‑Namespace Plugin | Keep the service catalog fresh, scaffold new projects in <30 s, and give developers a temporary namespace that lasts 72 h |
-| **C‑2 CI/CD Platform** | U‑CI1 Build & Cache Farm <br> U‑CI2 Argo CD Control‑Plane <br> U‑CI3 Ephemeral Env Engine | Provide ready‑to‑use build/test pipelines, sign every container image, and spin up short‑lived dev namespaces that clean themselves up |
-| **C‑4 Dev Environment Tooling** | U‑DEV1 Local‑K8s Kit <br> U‑DEV2 Dev‑Cluster Provisioner <br> U‑DEV3 Dev‑Secrets & TLS | Offer a one‑command dev bootstrap, keep dev clusters close to prod, and hand out short‑lived secrets & TLS certs |
-| **C‑5 Release Engineering** | U‑RE1 SemVer Policy <br> U‑RE2 Release Train Automation <br> U‑RE3 Rollback Orchestrator | Run a bi‑weekly release calendar, publish signed changelogs & SBOMs, and let teams roll back with one click |
+This team helps developers move from writing code to getting it running in production easily. They provide tools to start new projects, run builds, test code, deploy to environments, and safely release updates.
 
 ---
 
-## Summary Table
+### 🔧 Team Details
+
+| Team | Scope | What They Do |
+|------|-------|--------------|
+| **C-1 IDP Core & Self-Service** | Developer Portal, Start New Projects, Dev Namespaces | Help developers find existing apps, start new ones fast, and get temporary environments to test them |
+| **C-2 CI/CD Platform** | Build Systems, Deploy Pipelines, Test Environments | Run build and deploy pipelines, sign container images, and automatically clean up test setups |
+| **C-4 Dev Environment Tooling** | Local Dev Setup, Shared Clusters, Secrets | Provide local development tools, create shared clusters that feel like production, and manage temporary passwords and certificates |
+| **C-5 Release Engineering** | Release Calendar, Change Logs, Rollbacks | Automate releases, publish signed updates, and let teams undo a release with one click |
+
+---
+
+### Summary Table
 
 | Team | Description |
 |------|-------------|
-| **C‑1 IDP Core & Self‑Service** | Self‑service portal for metadata, scaffolding, and short‑lived dev namespaces. |
-| **C‑2 CI/CD Platform** | End‑to‑end build, test, sign, and deploy pipelines with GitOps control. |
-| **C‑4 Dev Environment Tooling** | Local and shared Kubernetes environments that mirror production and automate secrets. |
-| **C‑5 Release Engineering** | Predictable release train, signed artefacts, and instant rollbacks. |
+| **C-1 IDP Core & Self-Service** | Lets developers find and start apps easily and test in short-term environments. |
+| **C-2 CI/CD Platform** | Automates building, testing, and deploying apps with built-in security and cleanup. |
+| **C-4 Dev Environment Tooling** | Gives developers the tools and environments to code and test just like production. |
+| **C-5 Release Engineering** | Makes releases predictable, verifiable, and easy to roll back if needed. |
 
 ---
 
-## **1C – Team Tree View**
+### **C – Team Tree View**
 
 ```
 1C - Platform Engineering & Developer Experience
 │
 ├─ C-1 IDP Core & Self-Service
-│   ├─ U-P1 Software Catalog
-│   ├─ U-P2 Golden-Path Scaffolder
-│   ├─ U-P3 Dev-Namespace Plugin
+│   ├─ Scope:
+│   │   ├─ Developer Portal
+│   │   ├─ New Project Setup
+│   │   ├─ Temporary Environments
 │   ├─ Tasks:
-│   │   ├─ Keep service catalog fresh
-│   │   ├─ Scaffold new projects in <30 s
-│   │   └─ Give devs a 3‑day namespace
+│   │   ├─ Show list of all current apps
+│   │   ├─ Create new project setups fast
+│   │   └─ Give 3-day dev environments
 │
 ├─ C-2 CI/CD Platform
-│   ├─ U-CI1 Build & Cache Farm
-│   ├─ U-CI2 Argo CD Control-Plane
-│   ├─ U-CI3 Ephemeral Env Engine
+│   ├─ Scope:
+│   │   ├─ Build and Cache Farm
+│   │   ├─ GitOps Control (Argo CD)
+│   │   ├─ Temporary Test Environments
 │   ├─ Tasks:
-│   │   ├─ Maintain build & test pipelines
-│   │   ├─ Sign container images
-│   │   └─ Spin up & auto‑clean dev namespaces
+│   │   ├─ Run build and test pipelines
+│   │   ├─ Sign all container images
+│   │   └─ Auto-clean short-lived environments
 │
 ├─ C-4 Dev Environment Tooling
-│   ├─ U-DEV1 Local-K8s Kit
-│   ├─ U-DEV2 Dev-Cluster Provisioner
-│   ├─ U-DEV3 Dev-Secrets & TLS
+│   ├─ Scope:
+│   │   ├─ Local Development Kit
+│   │   ├─ Dev Cluster Setup
+│   │   ├─ Secrets and TLS Management
 │   ├─ Tasks:
-│   │   ├─ Provide one‑command dev bootstrap
-│   │   ├─ Keep dev clusters prod‑like
-│   │   └─ Hand out short‑lived secrets & certs
+│   │   ├─ One-command dev setup
+│   │   ├─ Keep dev clusters like production
+│   │   └─ Give temporary passwords and certificates
 │
 └─ C-5 Release Engineering
-    ├─ U-RE1 SemVer Policy
-    ├─ U-RE2 Release Train Automation
-    ├─ U-RE3 Rollback Orchestrator
+    ├─ Scope:
+    │   ├─ Versioning Policy
+    │   ├─ Automated Release Process
+    │   ├─ Rollback Tools
     ├─ Tasks:
-    │   ├─ Run bi‑weekly release calendar
-    │   ├─ Publish signed changelogs & SBOMs
-    │   └─ Offer one‑click rollback
+    │   ├─ Follow bi-weekly release schedule
+    │   ├─ Publish signed changelogs and SBOMs
+    │   └─ Provide one-click rollbacks
 ```
-
 ---
+
 # **D – Data & AI Infrastructure**
 
 ```
