@@ -30,20 +30,20 @@ Each section is a **team** responsible for a key area in infrastructure. Inside 
 └─ A-4 Networking Setup in Datacenter
 ```
 
-###  What This Team Does:
+### What This Team Does:
 
-This team handles everything related to the physical part of the infrastructure. They manage procurement, store equipment, test and install servers, and wire up the datacenter network.
+This team handles everything physical in the infrastructure. They buy and manage equipment, keep inventory, test and set up servers, and build the datacenter network.
 
 ---
 
 ### 🔧 Team Details
 
-| Team | Sub-Teams | What They Do |
-|------|-----------|--------------|
-| **A-1 Buying & Vendor Management** | U-V1 Vendor Relations <br> U-V2 Budget & Planning | Talk to vendors, handle purchase orders, manage budgets |
-| **A-2 Inventory & Warehousing** | U-W1 Incoming Equipment <br> U-W2 Asset Records <br> U-W3 Repairs & Disposal | Track incoming items, keep asset records, handle repairs and recycling |
-| **A-3 Server Hardware Setup** | U-D1 Hardware Testing <br> U-D2 Server Prep & Imaging <br> U-D3 Rack Installation | Test server parts, install OS/images, put servers into racks |
-| **A-4 Networking Setup in Datacenter** | U-N1 Network Cabling <br> U-N2 Switch & Router Setup <br> U-N3 Port Testing | Run cables, configure switches and routers, make sure connections work |
+| Team | Scope | What They Do |
+|------|-------|--------------|
+| **A-1 Buying & Vendor Management** | Vendor Relations, Budgeting | Work with suppliers, create purchase orders, manage datacenter hardware budgets |
+| **A-2 Inventory & Warehousing** | Receiving, Tracking, Repairs | Receive equipment, track assets, handle broken items and recycling |
+| **A-3 Server Hardware Setup** | Testing, Imaging, Rack Install | Test servers, load software, and install servers in racks |
+| **A-4 Networking Setup in Datacenter** | Cabling, Switch Setup, Port Testing | Lay cables, configure switches/routers, and verify all network links |
 
 ---
 
@@ -51,10 +51,10 @@ This team handles everything related to the physical part of the infrastructure.
 
 | Team | Description |
 |------|-------------|
-| **A-1 Buying & Vendor Management** | Handles vendor relations and buying all datacenter equipment. |
-| **A-2 Inventory & Warehousing** | Manages stock rooms, keeps track of all hardware, and handles recycling or broken items. |
-| **A-3 Server Hardware Setup** | Makes sure servers are working correctly before putting them into production. |
-| **A-4 Networking Setup in Datacenter** | Installs and configures networking equipment and cabling inside the datacenter. |
+| **A-1 Buying & Vendor Management** | Handles vendor relationships and purchasing for all datacenter equipment. |
+| **A-2 Inventory & Warehousing** | Manages inventory rooms, tracks all equipment, and handles repairs or recycling. |
+| **A-3 Server Hardware Setup** | Prepares servers with necessary software and installs them into datacenter racks. |
+| **A-4 Networking Setup in Datacenter** | Sets up network cables and hardware to ensure everything is connected properly. |
 
 ---
 
@@ -64,17 +64,19 @@ This team handles everything related to the physical part of the infrastructure.
 1A - Facilities & Physical Infrastructure
 │
 ├─ A-1 Buying & Vendor Management
-│   ├─ U-V1 Vendor Relations
-│   ├─ U-V2 Budget & Planning
+│   ├─ Scope:
+│   │   ├─ Vendor Relations
+│   │   ├─ Budgeting
 │   ├─ Tasks:
 │   │   ├─ Talk to vendors
 │   │   ├─ Create purchase orders
 │   │   └─ Manage costs and budgets
 │
 ├─ A-2 Inventory & Warehousing
-│   ├─ U-W1 Incoming Equipment
-│   ├─ U-W2 Asset Records
-│   ├─ U-W3 Repairs & Disposal
+│   ├─ Scope:
+│   │   ├─ Incoming Equipment
+│   │   ├─ Asset Records
+│   │   ├─ Repairs & Disposal
 │   ├─ Tasks:
 │   │   ├─ Receive equipment
 │   │   ├─ Track all devices in records
@@ -82,25 +84,26 @@ This team handles everything related to the physical part of the infrastructure.
 │   │   └─ Recycle or dispose items properly
 │
 ├─ A-3 Server Hardware Setup
-│   ├─ U-D1 Hardware Testing
-│   ├─ U-D2 Server Prep & Imaging
-│   ├─ U-D3 Rack Installation
+│   ├─ Scope:
+│   │   ├─ Hardware Testing
+│   │   ├─ Server Imaging
+│   │   ├─ Rack Installation
 │   ├─ Tasks:
 │   │   ├─ Test memory, disks, power, etc.
 │   │   ├─ Load OS images or firmware
 │   │   └─ Install and label servers in racks
 │
 └─ A-4 Networking Setup in Datacenter
-    ├─ U-N1 Network Cabling
-    ├─ U-N2 Switch & Router Setup
-    ├─ U-N3 Port Testing
+    ├─ Scope:
+    │   ├─ Network Cabling
+    │   ├─ Switch & Router Setup
+    │   ├─ Port Testing
     ├─ Tasks:
     │   ├─ Connect cables to racks
     │   ├─ Configure switches and routers
     │   └─ Test and validate all ports and links
 ```
 ---
-
 # **B – Core Cloud Infrastructure & Platform**
 
 ```
@@ -111,70 +114,72 @@ This team handles everything related to the physical part of the infrastructure.
 └─ B-3 Network, Edge & Service Connectivity
 ```
 
-## What This Area Does
+### What This Area Does
 
-This area provides the foundational compute, storage, and connectivity services that power every product environment—​from bare‑metal servers and Kubernetes nodes in our private datacentres to the multitenant service‑mesh that secures east‑west traffic. deliver a single, end‑to‑end service‑connectivity platform.
-
----
-
-## 🔧 Team Details
-
-| Team | Sub‑Units | What They Do |
-|------|-----------|--------------|
-| **B‑1 Compute Platform** | U‑C1 Cluster‑API <br> U‑C2 NodePool <br> U‑C3 Kernel Lifecycle | Deploy and operate Kubernetes clusters, manage heterogeneous node pools, patch and rollout Linux kernels |
-| **B‑2 Storage Services** | U‑S1 Object Storage (Ceph‑S3) <br> U‑S2 Block Storage (RBD) <br> U‑S3 DB‑as‑a‑Service (Vitess) | Provide S3‑compatible object storage, persistent block volumes, and highly available Vitess‑backed MySQL clusters |
-| **B‑3 Network, Edge & Service Connectivity** | U‑NE1 Spine‑Leaf BGP‑EVPN <br> U‑NE2 POP / CDN <br> U‑NE3 DNS / IPAM <br> U‑NE4 Istio Ambient Mesh <br> U‑NE5 API Gateway <br> U‑NE6 Feature Flags / Canary | Build & operate the L3/L4 network fabric, edge POPs and CDN, authoritative DNS & IP space, plus L7 mesh (STRICT mTLS), Envoy API gateway, rate‑limit tiers, and canary/feature‑flag rollout automation |
+This area provides the basic compute, storage, and networking services for all products. They run Kubernetes clusters, manage storage systems, and take care of both internal and external network connectivity.
 
 ---
 
-## Summary Table
+### 🔧 Team Details
+
+| Team | Scope | What They Do |
+|------|-------|--------------|
+| **B-1 Compute Platform** | Kubernetes Clusters, Node Management, OS Updates | Run Kubernetes clusters, manage different types of nodes, and update Linux kernels |
+| **B-2 Storage Services** | Object & Block Storage, Managed Databases | Provide storage for files and volumes, and run reliable MySQL database clusters |
+| **B-3 Network, Edge & Service Connectivity** | Networking, DNS, API Gateway, Service Mesh | Set up datacenter networks, handle DNS and IPs, secure internal traffic, and manage feature rollouts |
+
+---
+
+### Summary Table
 
 | Team | Description |
 |------|-------------|
-| **B‑1 Compute Platform** | Runs all Kubernetes control planes and worker pools, including kernel lifecycle management. |
-| **B‑2 Storage Services** | Delivers resilient object, block, and managed‑database services for stateful workloads. |
-| **B‑3 Network, Edge & Service Connectivity** | Provides unified data‑centre networking, global edge distribution, service‑mesh security, API ingress, and progressive‑delivery tooling. |
+| **B-1 Compute Platform** | Manages Kubernetes and Linux systems for running applications. |
+| **B-2 Storage Services** | Offers reliable storage and database services for stateful apps. |
+| **B-3 Network, Edge & Service Connectivity** | Handles all networking needs, from data center cabling to global edge routing and secure service communication. |
 
 ---
 
-## **B – Team Tree View**
+### **B – Team Tree View**
 
 ```
 1B - Core Cloud Infrastructure & Platform
 │
 ├─ B-1 Compute Platform
-│   ├─ U-C1 Cluster-API
-│   ├─ U-C2 NodePool
-│   ├─ U-C3 Kernel Lifecycle
+│   ├─ Scope:
+│   │   ├─ Cluster Setup
+│   │   ├─ Node Management
+│   │   ├─ Kernel Updates
 │   ├─ Tasks:
 │   │   ├─ Manage Kubernetes clusters
-│   │   ├─ Configure heterogeneous node pools
-│   │   └─ Patch and manage Linux kernels
+│   │   ├─ Configure node pools
+│   │   └─ Patch and maintain OS kernels
 │
 ├─ B-2 Storage Services
-│   ├─ U-S1 Object Storage (Ceph-S3)
-│   ├─ U-S2 Block Storage (RBD)
-│   ├─ U-S3 DB-as-a-Service (Vitess)
+│   ├─ Scope:
+│   │   ├─ Object Storage (Ceph-S3)
+│   │   ├─ Block Storage (RBD)
+│   │   ├─ DB-as-a-Service (Vitess)
 │   ├─ Tasks:
-│   │   ├─ Provide object and block storage
-│   │   ├─ Maintain durability & replication
-│   │   └─ Run and support Vitess clusters
+│   │   ├─ Provide file and volume storage
+│   │   ├─ Ensure high availability and backups
+│   │   └─ Manage MySQL databases with Vitess
 │
 └─ B-3 Network, Edge & Service Connectivity
-    ├─ U-NE1 Spine-Leaf BGP-EVPN
-    ├─ U-NE2 POP / CDN
-    ├─ U-NE3 DNS / IPAM
-    ├─ U-NE4 Istio Ambient Mesh
-    ├─ U-NE5 API Gateway
-    ├─ U-NE6 Feature Flags / Canary
+    ├─ Scope:
+    │   ├─ Data Center Networking (Spine-Leaf)
+    │   ├─ POP / CDN Routing
+    │   ├─ DNS / IPAM Management
+    │   ├─ Istio Service Mesh
+    │   ├─ API Gateway
+    │   ├─ Feature Flags / Canary Releases
     ├─ Tasks:
-    │   ├─ Engineer & operate network fabric
-    │   ├─ Run CDN pops & edge routing
-    │   ├─ Manage DNS zones & IP space
-    │   ├─ Enforce STRICT mTLS via mesh
-    │   ├─ Operate Envoy gateway & policies
-    │   ├─ Orchestrate canary & feature flags
-    │   └─ Maintain p99 latency < 100 ms, network availability ≥ 99.99 %
+    │   ├─ Build and maintain networks
+    │   ├─ Route edge traffic via CDN
+    │   ├─ Manage DNS zones and IPs
+    │   ├─ Secure traffic with mTLS mesh
+    │   ├─ Operate API gateways
+    │   └─ Roll out features gradually
 ```
 ---
 # **1C – Platform Engineering & Developer Experience**
