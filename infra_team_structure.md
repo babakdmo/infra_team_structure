@@ -352,3 +352,175 @@ This team provides the full data and AI backbone. They manage data clusters, pro
     │   ├─ Build and refresh wide-table snapshots
     │   └─ Maintain semantic and metric layers
 ```
+
+
+# **E – Security, Privacy & Compliance**
+
+```
+1E - Security, Privacy & Compliance
+│
+├─ E-1 Security Engineering
+├─ E-2 IAM / Zero-Trust
+├─ E-3 Privacy Engineering
+└─ E-4 Compliance Operations
+```
+
+### What This Team Does:
+
+This team ensures enterprise-wide data security, privacy protections, and regulatory compliance. It manages secure authentication and encryption infrastructure, governs access controls, enforces data protection techniques, and coordinates audit-readiness and policy enforcement.
+
+---
+
+### 🔧 Team Details
+
+| Team | Sub-Teams | What They Do |
+|------|-----------|--------------|
+| **E-1 Security Engineering** | U-SE1 Red / Blue Team <br> U-SE2 PKI / KMS | Conduct threat assessments, manage security tokens, and scan SBOMs |
+| **E-2 IAM / Zero-Trust** | U-IAM1 SSO <br> U-IAM2 SPIFFE / SPIRE | Handle identity systems, enforce zero-trust principles, rotate certs, manage mTLS |
+| **E-3 Privacy Engineering** | U-PR1 Differential Privacy <br> U-PR2 Right-to-Erase | Implement privacy-preserving analytics and deletion workflows |
+| **E-4 Compliance Operations** | U-CO1 SOC-2 Evidence Collection <br> U-CO2 GDPR Register | Ensure audit readiness and manage compliance documentation |
+
+---
+
+### Summary Table
+
+| Team | Description |
+|------|-------------|
+| **E-1 Security Engineering** | Performs penetration testing, manages secure token issuance and encryption services. |
+| **E-2 IAM / Zero-Trust** | Manages user identity and authentication infrastructure with zero-trust enforcement. |
+| **E-3 Privacy Engineering** | Designs systems for user data protection and supports regulatory data deletion. |
+| **E-4 Compliance Operations** | Maintains compliance reporting, evidence gathering, and audit policy enforcement. |
+
+---
+
+### **E – Team Tree View**
+
+```
+1E - Security, Privacy & Compliance
+│
+├─ E-1 Security Engineering
+│   ├─ U-SE1 Red / Blue Team
+│   ├─ U-SE2 PKI / KMS
+│   ├─ Tasks:
+│   │   ├─ SBOM Scan
+│   │   └─ FIPS 140-3 Token Issuance
+│
+├─ E-2 IAM / Zero-Trust
+│   ├─ U-IAM1 Single Sign-On (SSO)
+│   ├─ U-IAM2 SPIFFE / SPIRE
+│   ├─ Tasks:
+│   │   ├─ Cert Rotation (24h)
+│   │   └─ Enforce mTLS Everywhere
+│
+├─ E-3 Privacy Engineering
+│   ├─ U-PR1 Differential Privacy
+│   ├─ U-PR2 Right-to-Erase
+│   ├─ Tasks:
+│   │   └─ Iceberg Row-Delete Orchestrator
+│
+└─ E-4 Compliance Operations
+    ├─ U-CO1 SOC-2 Evidence Collection
+    ├─ U-CO2 GDPR Register
+    ├─ Tasks:
+    │   └─ Audit-Gate in Argo-CD
+```
+
+# **F – SRE Core (Reliability & Observability)**
+
+```
+1F - Reliability & Observability (SRE Core)
+│
+├─ F-1 Observability Platform
+├─ F-2 Incident Command & Response
+├─ F-3 Chaos & Resilience Engineering
+├─ F-4 Performance & Capacity Reliability
+├─ F-5 Reliability Automation & Tooling
+└─ F-6 Release & Availability Engineering
+```
+
+### What This Team Does:
+
+This team ensures system uptime, performance, and resilience across the entire platform. They build and maintain observability stacks, run incident command practices, engineer chaos and failure simulations, enforce release reliability, and implement automation for long-term stability.
+
+---
+
+### 🔧 Team Details
+
+| Team | Sub-Teams | What They Do |
+|------|-----------|--------------|
+| **F-1 Observability Platform** | U-OB1 Metrics (Prometheus) <br> U-OB2 Logs (Loki) <br> U-OB3 Traces (Tempo, OTEL) | Operate the telemetry stack including metrics, logs, and traces, with exporters and dashboards |
+| **F-2 Incident Command & Response** | U-IC1 PagerDuty Admin <br> U-IC2 Post-Mortem Office | Manage 24/7 on-call duties, run blameless RCA, coordinate major incident response |
+| **F-3 Chaos & Resilience Engineering** | U-CH1 Fault-Injection <br> U-CH2 GameDay Program | Execute chaos engineering drills, automate fault injection, run GameDays for resilience |
+| **F-4 Performance & Capacity Reliability** | U-PC1 Load-Test Harness <br> U-PC2 Performance Budget Framework | Maintain performance testing and forecasting infrastructure; enforce capacity models |
+| **F-5 Reliability Automation & Tooling** | U-RA1 Self-Healing Controllers <br> U-RA2 Toil-Buster Bots | Automate reliability operations using controllers, bots, and chatops tooling |
+| **F-6 Release & Availability Engineering** | U-RE1 SLO-Guard Admission Webhook <br> U-RE2 Prod-Readiness Board | Enforce release guardrails using admission control and readiness checklists |
+
+---
+
+### Summary Table
+
+| Team | Description |
+|------|-------------|
+| **F-1 Observability Platform** | Runs telemetry infrastructure (metrics, logs, traces) to support platform observability. |
+| **F-2 Incident Command & Response** | Ensures high availability and incident management through structured on-call response. |
+| **F-3 Chaos & Resilience Engineering** | Tests system failure readiness through fault injection and GameDay simulations. |
+| **F-4 Performance & Capacity Reliability** | Validates system scalability and performance budgets via load testing and forecasts. |
+| **F-5 Reliability Automation & Tooling** | Develops bots and controllers to automatically address recurring issues and reduce toil. |
+| **F-6 Release & Availability Engineering** | Protects reliability with deployment checks, rollback mechanisms, and readiness processes. |
+
+---
+
+### **F – Team Tree View**
+
+```
+1F - Reliability & Observability (SRE Core – Extended)
+│
+├─ F-1 Observability Platform
+│   ├─ U-OB1 Metrics (Prometheus)
+│   ├─ U-OB2 Logs (Loki)
+│   ├─ U-OB3 Traces (Tempo + OTEL)
+│   ├─ Tasks:
+│   │   ├─ Central Telemetry Stack
+│   │   ├─ Exporter SDKs, Dashboards
+│   │   └─ Multi-tenant Thanos Object Store
+│
+├─ F-2 Incident Command & Response
+│   ├─ U-IC1 PagerDuty Admin
+│   ├─ U-IC2 Post-Mortem Office
+│   ├─ Tasks:
+│   │   ├─ On-call rota, Paging Policy
+│   │   ├─ RCA Template, 24h Publish
+│   │   └─ Incident Commander Training
+│
+├─ F-3 Chaos & Resilience Engineering
+│   ├─ U-CH1 Fault-Injection (Litmus)
+│   ├─ U-CH2 GameDay Program
+│   ├─ Tasks:
+│   │   ├─ Chaos Scheduling (K8s Faults)
+│   │   └─ Quarterly GameDays
+│
+├─ F-4 Performance & Capacity Reliability
+│   ├─ U-PC1 Load-Test Harness
+│   ├─ U-PC2 Performance Budget Framework
+│   ├─ Tasks:
+│   │   ├─ Load Test Library (k6/Locust)
+│   │   ├─ Global SLO API & Autoscale
+│   │   └─ Feed Capacity Models
+│
+├─ F-5 Reliability Automation & Tooling
+│   ├─ U-RA1 Self-Healing Controllers
+│   ├─ U-RA2 Toil-Buster Bots
+│   ├─ Tasks:
+│   │   ├─ Auto-Remediation for Incidents
+│   │   └─ ChatOps Bots for Runbooks
+│
+└─ F-6 Release & Availability Engineering
+    ├─ U-RE1 SLO-Guard Admission Webhook
+    ├─ U-RE2 Prod-Readiness Review Board
+    ├─ Tasks:
+    │   ├─ Block Deploys on SLO Exhaustion
+    │   ├─ PRR Checklist + Review
+    │   └─ Rollback Scripts
+```
+
+
