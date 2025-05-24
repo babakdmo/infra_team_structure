@@ -31,8 +31,9 @@ Data Infrastructure Team
     └── Secondary pipelines + automated wide table generation
 ```
 ---
+---
 
-# **Data Platform Team**
+# **1- Data Platform Team**
 
 ## 🧾 Team Summary
 
@@ -113,7 +114,7 @@ Data Infrastructure Team
 
 --- 
 ---
-# **Data Engineering Team**
+# **2- Data Engineering Team**
 
 ## 🧾 Team Summary
 
@@ -187,7 +188,8 @@ Data Infrastructure Team
 | Generate new Spark pipeline from metadata using internal template engine | Python, Jinja2, GitLab CI |
 
 ---
-# **MLOps Team**
+---
+# **3- MLOps Team**
 
 ## 🧾 Team Summary
 
@@ -275,8 +277,8 @@ Data Infrastructure Team
 | Create REST and gRPC RAG APIs and agent interfaces to enable usage of LLM-based agents | LangChain, Haystack, LlamaIndex, Ollama |
 
 ---
-
-# **BI Services Team (Infra-Level)**
+---
+# **4- BI Services Team (Infra-Level)**
 
 ## 🧾 Team Summary
 
