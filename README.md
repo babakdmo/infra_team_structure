@@ -152,6 +152,7 @@
 | Emit lineage metadata from Spark jobs and Airflow DAGs to DataHub | DataHub SDK, PySpark, Airflow |
 | Generate new Spark pipeline from metadata using internal template engine | Python, Jinja2, GitLab CI |
 
+---
 # **MLOps Team**
 
 ## 🧾 Team Summary
@@ -163,7 +164,7 @@
 | **CI/CD** | GitLab CI for model validation, version control, image builds, and GitOps-based rollouts |
 | **Drift & Monitoring** | Prometheus and Evidently AI for drift detection, latency and error monitoring |
 | **Automation** | Auto-generation of ML pipelines using standardized templates and metadata inputs |
-| **Serving** | Inference deployments using Seldon Core, KFServing, or Triton Inference Server |
+| **Serving** | Inference deployments using Seldon Core, KFServing, Triton Inference Server, or Ollama |
 | **On-Call** | PagerDuty-based support for pipeline failures, drift breaches, and incident response |
 
 ---
@@ -173,10 +174,12 @@
 - Model tracking and registries using MLflow or Weights & Biases
 - Training orchestration using Argo Workflows, Kubeflow Pipelines, or Airflow
 - Distributed training using Ray
-- Model serving with Seldon Core, KFServing, or Triton Inference Server
+- Model serving with Seldon Core, KFServing, Triton Inference Server, and Ollama
 - Drift detection and inference monitoring
 - GitLab CI pipelines for automated training and deployment
 - Templates and tooling for pipeline auto-generation
+- LLM and AI Agent Platform Services (LangChain, LlamaIndex, Haystack, Ollama)
+- RAG APIs, prompt registry, memory services, and agent serving backend
 
 ---
 
@@ -198,7 +201,7 @@
 - Chain steps for preprocessing, training, evaluation, containerization, and registry upload.
 
 ### 4. Serving & Deployment
-- Deploy models using **Seldon Core**, **KFServing**, or **Triton Inference Server**.
+- Deploy models using **Seldon Core**, **KFServing**, **Triton Inference Server**, or **Ollama**.
 - Define and execute canary, shadow, and blue-green rollouts with **Istio** routing.
 - Enforce inference endpoint security via API key authentication or Role-Level Security (RLS).
 
@@ -212,6 +215,15 @@
 - Use internal templates and declarative YAML to scaffold pipelines dynamically.
 - Integrate pipeline generation with GitLab CI and internal developer tooling.
 
+### 7. LLM and AI Agent Platform Services
+- Deploy and manage backend infrastructure for agent frameworks: **LangChain**, **LlamaIndex**, **Haystack**.
+- Host and serve LLMs using **vLLM**, **Triton**, or **Ollama**.
+- Expose unified agent APIs such as `/chain/run`, `/rag/query`, and `/memory`.
+- Maintain a **Prompt Registry** and **Chain Template Catalog** with versioning and tags.
+- Provide vector store backends (e.g., **Weaviate**, **Qdrant**, **PGVector**) for retrieval-augmented generation.
+- Manage agent memory and session context via Redis, MongoDB, or graph databases.
+- Deliver observability, API security, RBAC, and usage analytics across all agent interfaces.
+
 ---
 
 ## 📋 Sample Subtasks
@@ -222,7 +234,12 @@
 | Configure MLflow server with backend store and GitLab CI model threshold check | MLflow, GitLab CI |
 | Build distributed Ray training job triggered by Argo Workflow | Ray, Argo Workflows |
 | Serve TensorFlow model via Triton Inference Server with autoscaling | Triton Server, Kubernetes |
+| Serve LLM via Ollama with role-based inference access | Ollama, Kubernetes, FreeIPA |
 | Setup Evidently monitor for drift on "transaction_amount" and notify Grafana | Evidently AI, Prometheus, Grafana |
 | Auto-generate Kubeflow pipeline from metadata and deploy via GitLab CI | Python, Jinja2, GitLab CI, Kubeflow |
+| Wrap LangChain agent and expose as REST endpoint with trace logging | LangChain, FastAPI, OpenTelemetry |
+| Index HR PDFs into vector store and enable RAG API for employee policy bot | Haystack, Weaviate, Ollama |
+| Create and publish prompt version to shared prompt registry with tags | Git, REST API, YAML config |
+
 
 
