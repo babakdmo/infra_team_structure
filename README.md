@@ -238,8 +238,4 @@
 | Setup Evidently monitor for drift on "transaction_amount" and notify Grafana | Evidently AI, Prometheus, Grafana |
 | Auto-generate Kubeflow pipeline from metadata and deploy via GitLab CI | Python, Jinja2, GitLab CI, Kubeflow |
 | Wrap LangChain agent and expose as REST endpoint with trace logging | LangChain, FastAPI, OpenTelemetry |
-| Index HR PDFs into vector store and enable RAG API for employee policy bot | Haystack, Weaviate, Ollama |
-| Create and publish prompt version to shared prompt registry with tags | Git, REST API, YAML config |
-
-
-
+| Create REST and gRPC RAG APIs and agent interfaces to enable usage of LLM-based agents | LangChain, Haystack, LlamaIndex, Ollama |
