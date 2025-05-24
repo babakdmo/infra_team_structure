@@ -522,5 +522,163 @@ This team ensures system uptime, performance, and resilience across the entire p
     │   ├─ PRR Checklist + Review
     │   └─ Rollback Scripts
 ```
+# **G – FinOps & Capacity Engineering**
+
+```
+1G - FinOps & Capacity Engineering
+│
+├─ G-1 Cost Analytics
+├─ G-2 Budget Governance
+├─ G-3 Capacity Modelling
+└─ G-4 Efficiency Engineering
+```
+
+### What This Team Does:
+
+This team is responsible for optimizing financial efficiency, managing infrastructure budgets, projecting future capacity needs, and engineering cost-effective scaling mechanisms. They align technical capacity planning with financial strategies to ensure scalable, affordable infrastructure growth.
+
+---
+
+### 🔧 Team Details
+
+| Team | Sub-Teams | What They Do |
+|------|-----------|--------------|
+| **G-1 Cost Analytics** | U-FA1 Kubecost <br> U-FA2 CloudHealth | Monitor and analyze cost data, enforce pre-deployment tagging policies for cost visibility |
+| **G-2 Budget Governance** | U-BG1 CapEx Board <br> U-BG2 Charge-Back | Manage budget exposure via APIs, automate reporting with bots, and govern budget limits |
+| **G-3 Capacity Modelling** | U-CM1 Prophet Forecast <br> U-CM2 Scenario Planning | Forecast infrastructure needs for long-term planning and optimize spot market purchases |
+| **G-4 Efficiency Engineering** | U-EE1 Spot Pool <br> U-EE2 Autoscaler | Engineer autoscaling and rightsizing strategies using spot market and automation tools |
+
+---
+
+### Summary Table
+
+| Team | Description |
+|------|-------------|
+| **G-1 Cost Analytics** | Provides cost visibility and policy enforcement via tools like Kubecost and CloudHealth. |
+| **G-2 Budget Governance** | Establishes budget policies and implements financial observability with Slack and APIs. |
+| **G-3 Capacity Modelling** | Builds long-term infrastructure forecasts and spot usage strategies with ML-based planners. |
+| **G-4 Efficiency Engineering** | Automates cost-efficient scaling and resource optimization with autoscalers and spot pools. |
+
+---
+
+### **G – Team Tree View**
+
+```
+1G - FinOps & Capacity Engineering
+│
+├─ G-1 Cost Analytics
+│   ├─ U-FA1 Kubecost
+│   ├─ U-FA2 CloudHealth
+│   ├─ Tasks:
+│   │   └─ Enforce "Tag-before-Deploy" in Argo-CD
+│
+├─ G-2 Budget Governance
+│   ├─ U-BG1 CapEx Board
+│   ├─ U-BG2 Charge-Back
+│   ├─ Tasks:
+│   │   ├─ Budget API
+│   │   └─ /cost-breakdown Slack Bot
+│
+├─ G-3 Capacity Modelling
+│   ├─ U-CM1 Prophet Forecast
+│   ├─ U-CM2 Scenario Planning
+│   ├─ Tasks:
+│   │   ├─ 3-Year DC Expansion Plan
+│   │   └─ Spot Market Plan
+│
+└─ G-4 Efficiency Engineering
+    ├─ U-EE1 Spot Pool
+    ├─ U-EE2 Autoscaler
+    ├─ Tasks:
+    │   ├─ Spot Coverage Monitoring
+    │   └─ Rightsizing Automation
+```
+
+# **H – Product, UX & Customer-Success Division**
+
+```
+1H - Product, UX & Customer-Success Division
+│
+├─ H-1 Product Strategy & Road-mapping
+├─ H-2 Product-Ops & Analytics
+├─ H-3 Pricing, Packaging & GTM
+├─ H-4 UX Research & DevRel
+└─ H-5 Customer-Success & Support
+```
+
+### What This Team Does:
+
+This division bridges product direction with user needs, go-to-market strategies, customer success, and experience design. It drives roadmap alignment, adoption analytics, pricing strategies, documentation, and onboarding efforts across internal and external stakeholders.
+
+---
+
+### 🔧 Team Details
+
+| Team | Sub-Teams | What They Do |
+|------|-----------|--------------|
+| **H-1 Product Strategy & Road-mapping** | U-PS1 Market/User Research <br> U-PS2 Opportunity Backlog (Lean Canvas) | Conduct user interviews, analyze competitive markets, maintain quarterly product roadmaps |
+| **H-2 Product-Ops & Analytics** | U-PO1 KPI Instrumentation <br> U-PO2 Growth Experiments | Define product metrics, run experiments, and build feature-level ROI insights |
+| **H-3 Pricing, Packaging & GTM** | U-PP1 Pricing Model <br> U-PP2 Contracts & SLA | Define pricing plans, maintain SLAs, collaborate on business models with Sales/Finance |
+| **H-4 UX Research & DevRel** | U-UX1 Journey Mapping <br> U-DR1 Developer Advocacy | Run UX research, write documentation and articles, support the developer community |
+| **H-5 Customer-Success & Support** | U-CS1 Onboarding <br> U-CS2 Technical Account Mgmt. (TAM) | Provide support and training for internal and external product users |
+
+---
+
+### Summary Table
+
+| Team | Description |
+|------|-------------|
+| **H-1 Product Strategy & Road-mapping** | Guides product direction through market research and stakeholder feedback. |
+| **H-2 Product-Ops & Analytics** | Measures success metrics and runs A/B tests for growth and retention. |
+| **H-3 Pricing, Packaging & GTM** | Designs pricing models and works with business units to maintain profitability. |
+| **H-4 UX Research & DevRel** | Improves developer/user experience and provides learning resources. |
+| **H-5 Customer-Success & Support** | Supports onboarding, training, and issue resolution for product users. |
+
+---
+
+### **H – Team Tree View**
+
+```
+1H - Product, UX & Customer-Success Division
+│
+├─ H-1 Product Strategy & Road-mapping
+│   ├─ U-PS1 Market/User Research
+│   ├─ U-PS2 Opportunity Backlog
+│   ├─ Tasks:
+│   │   ├─ Monthly User Interviews
+│   │   ├─ Competitive/TAM Analysis
+│   │   └─ Quarterly Roadmaps
+│
+├─ H-2 Product-Ops & Analytics
+│   ├─ U-PO1 KPI Instrumentation
+│   ├─ U-PO2 Growth Experiments
+│   ├─ Tasks:
+│   │   ├─ Adoption & Churn Metrics
+│   │   ├─ A/B Testing
+│   │   └─ ROI Models
+│
+├─ H-3 Pricing, Packaging & GTM
+│   ├─ U-PP1 Pricing Model
+│   ├─ U-PP2 Contracts & SLA
+│   ├─ Tasks:
+│   │   ├─ Free vs. Premium Plans
+│   │   ├─ Legal DPA/SLA
+│   │   └─ Sales/Finance Collab for P&L
+│
+├─ H-4 UX Research & DevRel
+│   ├─ U-UX1 Journey Mapping
+│   ├─ U-DR1 Developer Advocacy
+│   ├─ Tasks:
+│   │   ├─ Backstage Usability Testing
+│   │   ├─ Docs, Sample Code, Talks
+│
+└─ H-5 Customer-Success & Support
+    ├─ U-CS1 Onboarding
+    ├─ U-CS2 Technical Account Mgmt. (TAM)
+    ├─ Tasks:
+    │   ├─ Ticket SLA (L1/L2)
+    │   └─ Enablement Training
+```
+
 
 
