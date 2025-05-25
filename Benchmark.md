@@ -35,3 +35,41 @@ Google Data Infrastructure
 ## ☁️ Platform
 
 All sub-teams and services are built and operated using **Google Cloud** infrastructure.
+
+
+# Amazon (AWS + Amazon Retail) – Data Infrastructure Sub-Teams
+
+This document outlines the major data infrastructure sub-teams at Amazon, including both AWS and Amazon Retail. Each team has specific goals and works with particular tools to manage, process, and analyze data.
+
+---
+
+## 📊 Sub-Team Overview Table
+
+| **Sub-Team Name**             | **What the Team Does**                                                                                         | **Technologies Used**                                 |
+|------------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| Amazon Consumer Data Platform (ACDP) | Manages commerce data lake, performs batch ETL, and supports offline machine learning models               | EMR (Hadoop/Spark), Redshift, Glue Catalog, S3 Lake    |
+| Real-time Streaming Platform  | Handles real-time event ingestion and transformation, delivering data reliably to the lake                     | Kinesis family, MSK (Kafka), Flink                     |
+| ML Services Platform          | Provides tools for model training, feature storage, fairness scans, and hosted notebooks                        | SageMaker, Feature Store, Clarify                      |
+| Lake Governance & FinOps      | Controls access, checks data format rules, and manages cost visibility and reporting                            | Lake Formation, AQUA, Cost Explorer                    |
+
+---
+
+## 🌳 Team Structure Tree
+
+```
+Amazon Data Infrastructure
+├── Amazon Consumer Data Platform (ACDP)
+│   └── Tools: EMR (Hadoop/Spark), Redshift, Glue Catalog, S3 Lake
+├── Real-time Streaming Platform
+│   └── Tools: Kinesis family, MSK (Kafka), Flink
+├── ML Services Platform
+│   └── Tools: SageMaker, Feature Store, Clarify
+└── Lake Governance & FinOps
+    └── Tools: Lake Formation, AQUA, Cost Explorer
+```
+
+---
+
+## ☁️ Platform
+
+All of the above teams and tools operate on **Amazon Web Services (AWS)** infrastructure.
