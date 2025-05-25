@@ -310,3 +310,77 @@ Spotify Data Infrastructure
 
 Spotify runs its data infrastructure primarily on **Google Cloud Platform (GCP)** and uses a mix of open-source, custom-built, and third-party tools to manage the entire data lifecycle.
 
+# Shopify – Data Infrastructure Sub-Teams
+
+This document outlines the major sub-teams in Shopify’s data infrastructure organization. Each team focuses on specific aspects of the data lifecycle, from ingestion and streaming to lakehouse management and ML platform engineering.
+
+---
+
+## 📊 Sub-Team Overview Table
+
+| **Sub-Team Name**         | **What the Team Does**                                                                                       | **Technologies Used**                                               |
+|--------------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| Lakehouse Team           | Manages a single Iceberg table layer with support for federated and OLAP queries                              | Iceberg on S3, Trino, ClickHouse                                     |
+| Streaming Data           | Ingests real-time buyer signals, runs Flink applications, and handles CDC from MySQL                          | Kafka/Flink, Debezium, Flink SQL                                     |
+| Merlin ML Platform       | Provides full training, serving, and monitoring for ML models related to fraud detection and promotions       | Merlin (Ray Train/Tune, Kubeflow), FeatureDSL                        |
+| Data Trust Chapter       | Enforces GDPR compliance, data quality standards, and runs auditing tools                                      | Great Expectations, Monte Carlo, “Data Trust” checklist              |
+
+---
+
+## 🌳 Team Structure Tree
+
+```
+Shopify Data Infrastructure
+├── Lakehouse Team
+│   └── Tools: Iceberg on S3, Trino, ClickHouse
+├── Streaming Data
+│   └── Tools: Kafka/Flink, Debezium, Flink SQL
+├── Merlin ML Platform
+│   └── Tools: Merlin (Ray Train/Tune, Kubeflow), FeatureDSL
+└── Data Trust Chapter
+    └── Tools: Great Expectations, Monte Carlo, Data Trust checklist
+```
+
+---
+
+## ☁️ Platform
+
+- Shopify uses **S3** as the data lake backend, and its infrastructure is engineered around open formats and cloud-native platforms.
+- **Production Engineers** at Shopify manage Kubernetes and CI, but **do not own Iceberg or Merlin**—those are owned by the respective data platform teams.
+
+# Airbnb – Data Infrastructure Sub-Teams
+
+This document outlines the core sub-teams in Airbnb's data infrastructure organization. Each team is responsible for part of the platform, ranging from batch processing to machine learning and metadata management.
+
+---
+
+## 📊 Sub-Team Overview Table
+
+| **Sub-Team Name**          | **What the Team Does**                                                                                     | **Technologies Used**                                      |
+|---------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| Metric & Batch Platform   | Provides a central metric layer and manages Spark-based ETL pipelines across the company                    | Minerva metric platform, Spark, Hive, Airflow               |
+| Realtime Platform         | Delivers low-latency data for search, pricing, and operational use cases                                    | Kafka, Flink, Pinot                                         |
+| ML Infrastructure         | Supports the full lifecycle of machine learning, including feature engineering, training, and serving       | Bighead, Zipline Feature Store, Redspot notebooks           |
+| Data Management & Catalog | Maintains Airbnb’s data catalog, cost visibility tools, and privacy scanning                                | Metis, DataPortal, Amundsen lineage                         |
+
+---
+
+## 🌳 Team Structure Tree
+
+```
+Airbnb Data Infrastructure
+├── Metric & Batch Platform
+│   └── Tools: Minerva metric platform, Spark, Hive, Airflow
+├── Realtime Platform
+│   └── Tools: Kafka, Flink, Pinot
+├── ML Infrastructure
+│   └── Tools: Bighead, Zipline FS, Redspot notebooks
+└── Data Management & Catalog
+    └── Tools: Metis, DataPortal, Amundsen lineage
+```
+
+---
+
+## ☁️ Platform
+
+- Airbnb’s infrastructure is organized so that **Bighead ML Platform** is part of the **Data Infrastructure** team. This allows ML models to be deployed without relying on separate DevOps ticket workflows.
