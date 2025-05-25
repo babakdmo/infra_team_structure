@@ -1,10 +1,10 @@
-# Google (Alphabet) – Data Infrastructure Sub-Teams
+# 1- Google (Alphabet) – Data Infrastructure Sub-Teams
 
 This document describes the key sub-teams in Google's data infrastructure division. Each team has a specific role and uses a set of technologies to do its job.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**             | **What the Team Does**                                                                                         | **Technologies Used**                         |
 |------------------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
@@ -16,7 +16,7 @@ This document describes the key sub-teams in Google's data infrastructure divisi
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 Google Data Infrastructure
@@ -32,18 +32,20 @@ Google Data Infrastructure
     └── Tools: Dataplex, Data Catalog
 ```
 
-## ☁️ Platform
+### ☁️ Platform
 
 All sub-teams and services are built and operated using **Google Cloud** infrastructure.
 
+---
+---
 
-# Amazon (AWS + Amazon Retail) – Data Infrastructure Sub-Teams
+# 2- Amazon (AWS + Amazon Retail) – Data Infrastructure Sub-Teams
 
 This document outlines the major data infrastructure sub-teams at Amazon, including both AWS and Amazon Retail. Each team has specific goals and works with particular tools to manage, process, and analyze data.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**             | **What the Team Does**                                                                                         | **Technologies Used**                                 |
 |------------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
@@ -54,7 +56,7 @@ This document outlines the major data infrastructure sub-teams at Amazon, includ
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 Amazon Data Infrastructure
@@ -70,17 +72,20 @@ Amazon Data Infrastructure
 
 ---
 
-## ☁️ Platform
+### ☁️ Platform
 
 All of the above teams and tools operate on **Amazon Web Services (AWS)** infrastructure.
 
-# Microsoft (Core AI – Platform & Tools) – Data Infrastructure Sub-Teams
+---
+---
+
+# 3- Microsoft (Core AI – Platform & Tools) – Data Infrastructure Sub-Teams
 
 This document outlines the key sub-teams within Microsoft's Core AI group, focusing on platforms and tools used to manage AI workloads, models, telemetry, and compliance.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**            | **What the Team Does**                                                                                             | **Technologies Used**                                     |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
@@ -91,7 +96,7 @@ This document outlines the key sub-teams within Microsoft's Core AI group, focus
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 Microsoft Core AI – Platform & Tools
@@ -107,20 +112,20 @@ Microsoft Core AI – Platform & Tools
 
 ---
 
-## ☁️ Platform
+### ☁️ Platform
 
 These teams and tools operate on **Microsoft Azure**. Kubernetes fabric and data center networking are part of **Azure Core** and are used by Core AI but not owned by it.
 
 ---
 ---
 
-# Meta (Facebook) – Data Infrastructure Sub-Teams
+# 4-  Meta (Facebook) – Data Infrastructure Sub-Teams
 
 This document outlines the primary sub-teams in Meta's data infrastructure organization. Each team handles specific responsibilities related to data storage, analytics, machine learning, and governance.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**               | **What the Team Does**                                                                                         | **Technologies Used**                                |
 |--------------------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
@@ -132,7 +137,7 @@ This document outlines the primary sub-teams in Meta's data infrastructure organ
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 Meta Data Infrastructure
@@ -150,18 +155,20 @@ Meta Data Infrastructure
 
 ---
 
-## ☁️ Platform
+### ☁️ Platform
 
 These services and tools are developed and operated internally within **Meta’s own data centers and infrastructure**.
 
+---
+---
 
-# Netflix – Data Infrastructure Sub-Teams
+# 5- Netflix – Data Infrastructure Sub-Teams
 
 This document outlines the major data infrastructure sub-teams within Netflix, detailing their roles and the tools they use to manage, process, and analyze data.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**                | **What the Team Does**                                                                                          | **Technologies Used**                                               |
 |----------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
@@ -172,7 +179,7 @@ This document outlines the major data infrastructure sub-teams within Netflix, d
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 Netflix Data Infrastructure
@@ -188,7 +195,7 @@ Netflix Data Infrastructure
 
 ---
 
-## ☁️ Platform
+### ☁️ Platform
 
 These systems are developed and run on **Netflix's internal infrastructure**, including Titus (Netflix's container platform) and other open-source and custom technologies.
 
