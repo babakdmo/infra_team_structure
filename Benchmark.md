@@ -404,3 +404,27 @@ Airbnb Data Infrastructure
 ### ☁️ Platform
 
 - Airbnb’s infrastructure is organized so that **Bighead ML Platform** is part of the **Data Infrastructure** team. This allows ML models to be deployed without relying on separate DevOps ticket workflows.
+
+---
+---
+
+# Cross-Company Mapping of Data Platform Capabilities
+
+This table compares the key data infrastructure components across 10 major tech companies, mapped into four primary capability blocks.
+
+---
+
+## 📊 Cross-Company Capability Matrix
+
+| **Company**     | **Data Platform**                              | **Data Engineering / Orchestration**                      | **MLOps / Feature Platform**                          | **Self-Service BI / Serving Layer**          |
+|----------------|--------------------------------------------------|------------------------------------------------------------|--------------------------------------------------------|-----------------------------------------------|
+| Google         | Colossus + Spanner + BigQuery/Dataproc          | Dataflow / Dataproc pipelines & Pub/Sub ingest             | Vertex AI, TFX, Feast, TPU fleet                       | BigQuery interactive SQL                      |
+| Amazon (AWS)   | ACDP (EMR + Redshift + S3)                       | Glue ETL, Kinesis/MSK/Flink streaming                      | SageMaker + Feature Store                              | Redshift-Serverless & QuickSight             |
+| Microsoft      | Fabric OneLake + Synapse warehouses             | Data Factory pipelines, Kusto ingest                       | Azure AI Foundry, DeepSpeed, ONNX-RT                   | Synapse SQL / Power BI Fabric                 |
+| Meta (Facebook)| HDFS exabyte lake, Presto, Spark                | Scuba + Scribe realtime ETL & Laser batch                  | FBLearner + PyTorch Edge                               | Presto & Scuba exploratory SQL                |
+| Netflix        | Iceberg/S3 + Spark on Titus                     | Maestro ETL workflows                                      | Metaflow + Feast-like FS                               | Presto + Lumen dashboards                     |
+| Uber           | Batch Hadoop/Spark/Presto platform              | Kafka + Flink stream ETL                                   | Michelangelo (feature-store → serve)                   | Pinot/Presto OLAP                             |
+| LinkedIn       | Offline DP (HDFS, Pinot-Offline)                | Streams Infra (Samza, Brooklin)                            | Pro-ML + DALI inferencing                              | Pinot-Realtime & Presto                       |
+| Spotify        | Lakehouse (Iceberg + BigQuery)                  | Dagster + Beam/Scio pipelines                              | Klio / Salem ML portal                                 | Trino federation, Looker                      |
+| Shopify        | Iceberg lake on S3 + Trino                      | Kafka/Flink CDC pipelines                                  | Merlin (Ray + Kubeflow)                                | ClickHouse + Trino & Looker                   |
+| Airbnb         | Minerva metric lake, Spark/Hive                 | Airflow + Flink realtime ETL                               | Bighead (feature → train → serve)                      | Superset & Pinot SQL                          |
