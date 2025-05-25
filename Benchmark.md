@@ -199,14 +199,16 @@ Netflix Data Infrastructure
 
 These systems are developed and run on **Netflix's internal infrastructure**, including Titus (Netflix's container platform) and other open-source and custom technologies.
 
+---
+---
 
-# Uber – Data Infrastructure Sub-Teams
+# 6- Uber – Data Infrastructure Sub-Teams
 
 This document outlines the main sub-teams within Uber’s data infrastructure organization. Each team plays a key role in managing batch, streaming, ML platforms, and data governance systems.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**          | **What the Team Does**                                                                                       | **Technologies Used**                                               |
 |---------------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
@@ -217,7 +219,7 @@ This document outlines the main sub-teams within Uber’s data infrastructure or
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 Uber Data Infrastructure
@@ -233,20 +235,22 @@ Uber Data Infrastructure
 
 ---
 
-## ☁️ Platform
+### ☁️ Platform
 
 - **Batch and Streaming are sibling teams** due to scaling demands (e.g., Kafka ingress over 4 PB/day).
 - **Fabric** components (Kubernetes, Vault, Networking) are handled by a separate **Compute Platform** team.
 - **Michelangelo** is part of the **Data Infrastructure** org.
 
+---
+---
 
-# LinkedIn – Data Infrastructure Sub-Teams
+# 7- LinkedIn – Data Infrastructure Sub-Teams
 
 This document outlines the major sub-teams within LinkedIn's data infrastructure organization. Each team is responsible for critical components that manage, process, or serve data and machine learning features.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**           | **What the Team Does**                                                                                      | **Technologies Used**                              |
 |----------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
@@ -257,7 +261,7 @@ This document outlines the major sub-teams within LinkedIn's data infrastructure
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 LinkedIn Data Infrastructure
@@ -273,17 +277,20 @@ LinkedIn Data Infrastructure
 
 ---
 
-## ☁️ Platform
+### ☁️ Platform
 
 All of these services are developed and maintained within **LinkedIn’s own data centers** and use a combination of internal and open-source tools, some of which (like DataHub) were originally developed at LinkedIn.
 
-# Spotify – Data Infrastructure Sub-Teams
+---
+---
+
+# 8- Spotify – Data Infrastructure Sub-Teams
 
 This document describes the primary sub-teams in Spotify’s data infrastructure organization. Each team is responsible for a distinct area of the data platform, from ingestion and processing to machine learning and governance.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**               | **What the Team Does**                                                                                         | **Technologies Used**                                                   |
 |--------------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -295,7 +302,7 @@ This document describes the primary sub-teams in Spotify’s data infrastructure
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 Spotify Data Infrastructure
@@ -313,17 +320,20 @@ Spotify Data Infrastructure
 
 ---
 
-## ☁️ Platform
+### ☁️ Platform
 
 Spotify runs its data infrastructure primarily on **Google Cloud Platform (GCP)** and uses a mix of open-source, custom-built, and third-party tools to manage the entire data lifecycle.
 
-# Shopify – Data Infrastructure Sub-Teams
+---
+---
+
+# 9- Shopify – Data Infrastructure Sub-Teams
 
 This document outlines the major sub-teams in Shopify’s data infrastructure organization. Each team focuses on specific aspects of the data lifecycle, from ingestion and streaming to lakehouse management and ML platform engineering.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**         | **What the Team Does**                                                                                       | **Technologies Used**                                               |
 |--------------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
@@ -334,7 +344,7 @@ This document outlines the major sub-teams in Shopify’s data infrastructure or
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 Shopify Data Infrastructure
@@ -350,18 +360,21 @@ Shopify Data Infrastructure
 
 ---
 
-## ☁️ Platform
+### ☁️ Platform
 
 - Shopify uses **S3** as the data lake backend, and its infrastructure is engineered around open formats and cloud-native platforms.
 - **Production Engineers** at Shopify manage Kubernetes and CI, but **do not own Iceberg or Merlin**—those are owned by the respective data platform teams.
 
-# Airbnb – Data Infrastructure Sub-Teams
+---
+---
+
+# 10- Airbnb – Data Infrastructure Sub-Teams
 
 This document outlines the core sub-teams in Airbnb's data infrastructure organization. Each team is responsible for part of the platform, ranging from batch processing to machine learning and metadata management.
 
 ---
 
-## 📊 Sub-Team Overview Table
+### 📊 Sub-Team Overview Table
 
 | **Sub-Team Name**          | **What the Team Does**                                                                                     | **Technologies Used**                                      |
 |---------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
@@ -372,7 +385,7 @@ This document outlines the core sub-teams in Airbnb's data infrastructure organi
 
 ---
 
-## 🌳 Team Structure Tree
+### 🌳 Team Structure Tree
 
 ```
 Airbnb Data Infrastructure
@@ -388,6 +401,6 @@ Airbnb Data Infrastructure
 
 ---
 
-## ☁️ Platform
+### ☁️ Platform
 
 - Airbnb’s infrastructure is organized so that **Bighead ML Platform** is part of the **Data Infrastructure** team. This allows ML models to be deployed without relying on separate DevOps ticket workflows.
