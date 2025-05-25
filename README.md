@@ -360,3 +360,33 @@ Data Infrastructure Team
 | Publish Superset embedding SDK with RLS token support and CI versioning | Superset, JS SDK, Artifactory |
 | Deploy and configure Trino with autoscaling worker pool on Kubernetes | Trino Operator, K8s HPA |
 | Run weekly slow-query audit on StarRocks and tune joins and indexes | StarRocks, Prometheus, Grafana |
+
+
+---
+---
+
+## 📌 Benefits of 2-Person Focused Subteams
+
+- **Clear Ownership = Faster Fixes**  
+  Each pod is responsible for specific systems (like Spark or Superset). If something breaks, the right pod fixes it fast—no confusion or delay.
+
+- **Specialization with Teamwork**  
+  Engineers can focus and get really good at their area, while having a teammate to share knowledge and support each other.
+
+- **Work in Parallel**  
+  Each pod can handle its own tasks at the same time—no blocking or stepping on each other’s work.
+
+- **Built-in Learning and Growth**  
+  Juniors work closely with more experienced teammates and grow naturally over time without needing formal managers.
+
+- **Handles PTO and Changes Well**  
+  If someone is on vacation or leaves the company, their teammate can keep things going without disrupting the whole team.
+
+- **Easy to Grow**  
+  You can add more people to each pod later without needing to change the whole team structure.
+
+- **Good for Future Products**  
+  If your company decides to offer internal tools (like ML or BI platforms) as services for others, these pods already match what those services would need.
+
+---
+
