@@ -365,28 +365,44 @@ Data Infrastructure Team
 ---
 ---
 
-## 📌 Benefits of 2-Person Focused Subteams
-
-- **Clear Ownership = Faster Fixes**  
-  Each pod is responsible for specific systems (like Spark or Superset). If something breaks, the right pod fixes it fast—no confusion or delay.
-
-- **Specialization with Teamwork**  
-  Engineers can focus and get really good at their area, while having a teammate to share knowledge and support each other.
-
-- **Work in Parallel**  
-  Each pod can handle its own tasks at the same time—no blocking or stepping on each other’s work.
-
-- **Built-in Learning and Growth**  
-  Juniors work closely with more experienced teammates and grow naturally over time without needing formal managers.
-
-- **Handles PTO and Changes Well**  
-  If someone is on vacation or leaves the company, their teammate can keep things going without disrupting the whole team.
-
-- **Easy to Grow**  
-  You can add more people to each pod later without needing to change the whole team structure.
-
-- **Good for Future Products**  
-  If your company decides to offer internal tools (like ML or BI platforms) as services for others, these pods already match what those services would need.
+# ✅ Why Organizing into Four 2-Person Subteams Works Better
 
 ---
+
+## 📌 Benefits of Creating Focused Subteams
+
+- **Clear Responsibilities = Faster Problem Resolution**  
+  Each subteam owns a specific area (like platform infrastructure, ML, pipelines, or BI). When something goes wrong, it’s clear who handles it—no delays or confusion.
+
+- **Focused Expertise with Built-in Collaboration**  
+  Engineers can specialize in one domain and develop deep skills, while working closely with a teammate to share context and knowledge.
+
+- **Multiple Projects Move Forward at the Same Time**  
+  Different subteams can work on different priorities without getting in each other’s way—like fixing Spark configs while also launching a new Superset dashboard.
+
+- **Structured Mentoring and Career Growth**  
+  Pairing a less experienced engineer with a more experienced one makes it easier to learn and grow—without needing formal managers for each subteam.
+
+- **Better Resilience to Leave or Turnover**  
+  If someone takes vacation or leaves, their teammate can continue the work. The rest of the team stays productive and unaffected.
+
+- **Flexible and Easy to Grow**  
+  As your team expands, you can add people into each subteam without needing to change how the whole team is organized.
+
+- **Supports Future Business Needs**  
+  If your company later offers parts of the data platform (ML, BI, pipelines) as services to other teams or clients, these subteams already match those service boundaries.
+
+---
+
+## Why This Team Structure Is the Right Choice
+
+Organizing into focused subteams provides:
+
+- **Clear accountability** – Everyone knows who is responsible for each system or service.
+- **Faster progress** – More projects can be delivered in parallel without conflicts.
+- **Strong reliability** – You always have backup; work doesn’t stop when someone is away.
+- **Higher skill levels** – Engineers improve faster by working in a consistent area.
+- **Future readiness** – Easy to scale, extend, or align with company-wide products.
+
+This structure creates a clear, resilient, and scalable team that delivers more—without chaos or delays.
 
