@@ -673,3 +673,22 @@ This document outlines a clear and actionable two-phase, 12-week roadmap to form
 - Published internal and external service structure
 - Stakeholder-ready team with on-call coverage
 - Growing hiring track decoupled from operational maturity
+
+
+---
+
+### Team State at End of Week 12
+
+By the end of the 12-week operationalization phase, the expected team composition is as follows:
+
+| Subteam               | Engineers |
+|------------------------|-----------|
+| Data Platform          | 2         |
+| Data Engineering       | 2         |
+| BI Services (Self-Serve Infra) | 2         |
+| MLOps                  | 1         |
+
+- The remaining two engineers will be added in the following hiring cycles.
+- Team operations, scopes, and stakeholder responsibilities will already be fully functional across all four domains.
+- Team reporting remains flat, all engineers report to the Data Infrastructure Lead.
+
