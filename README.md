@@ -369,7 +369,7 @@ Data Infrastructure Team
 
 ---
 
-## 📌 Benefits of Creating Focused Subteams
+###  Benefits of Creating Focused Subteams
 
 - **Clear Responsibilities = Faster Problem Resolution**  
   Each subteam owns a specific area (like platform infrastructure, ML, pipelines, or BI). When something goes wrong, it’s clear who handles it—no delays or confusion.
@@ -394,7 +394,7 @@ Data Infrastructure Team
 
 ---
 
-## Why This Team Structure Is the Right Choice
+### Why This Team Structure Is the Right Choice
 
 Organizing into focused subteams provides:
 
@@ -405,4 +405,97 @@ Organizing into focused subteams provides:
 - **Future readiness** – Easy to scale, extend, or align with company-wide products.
 
 This structure creates a clear, resilient, and scalable team that delivers more—without chaos or delays.
+
+---
+---
+
+# 🌳 Data Infrastructure Team Structure
+
+This structure shows how an 8-person data infrastructure team is organized under a single team lead, with four specialized subteams. Each subteam currently has two members and operates without a designated subteam lead.
+
+---
+
+###  Team Structure 
+```
+                         Data Infrastructure Lead
+                                  │
+        ┌──────────────┬──────────────┬──────────────┐
+        ▼              ▼              ▼              ▼
+Data Platform    Data Engineering     MLOps        BI Services
+     Team             Team             Team            Team
+     │                 │                │               │
+ ┌───┴───┐         ┌───┴───┐        ┌───┴───┐       ┌───┴───┐
+ ▼       ▼         ▼       ▼        ▼       ▼       ▼       ▼
+Eng 1   Eng 2     Eng 3   Eng 4    Eng 5   Eng 6   Eng 7   Eng 8
+```
+
+
+---
+
+### Leadership Rules
+
+#### Current Phase: Flat Subteams (2 Members Each)
+- No subteam leads yet.
+- All 8 engineers report directly to the **Data Infrastructure Lead**.
+
+---
+
+##### Promotion Rule: Subteam Lead When Team Reaches 3 People
+- When any subteam grows to **3 or more engineers**, assign a **subteam lead**.
+- The subteam lead will:
+  - Coordinate day-to-day tasks within the team.
+  - Mentor junior members.
+  - Represent the team in planning and reviews.
+- Subteam leads **are not managers**, but **technical points of contact**.
+
+---
+
+### Responsibilities of the Data Infrastructure Lead
+---
+
+##### Organizational Leadership
+
+- **Performance Management**  
+  Conduct regular 1:1s, track individual contributions, and manage performance reviews using clear and consistent evaluation criteria.
+
+- **Shape Up Process Ownership**  
+  Own and lead the Shape Up process within the team—define appetites, pitch high-leverage projects, and guide cycle planning. Ensure pitches are technically feasible and strategically aligned.
+
+- **Mentorship & Career Growth**  
+  Actively support engineers’ professional development through structured growth plans, skill mapping, and feedback loops.
+
+- **Conflict Resolution**  
+  Resolve prioritization or ownership disputes and ensure collaboration across all subteams stays constructive and timely.
+
+- **Cross-Team and Stakeholder Communication**  
+  Act as the main point of contact between the data infrastructure team and other internal teams. Maintain visibility and transparency of work progress, timelines, and delivery risks.
+
+- **On-Call Ownership and Escalation**  
+  Define and manage the on-call rotation, escalation policy, and post-incident review process. Ensure 24/7 coverage across critical systems and coordinate timely resolution of Sev-1 incidents.
+
+---
+
+##### Technical Leadership
+
+- **Architecture Design & Approval**  
+  Lead the design of major components such as secure data lakes, streaming pipelines, ML infra, and analytics stack integrations. Approve proposals and enforce architectural standards.
+
+- **Technical Roadmap Ownership**  
+  Maintain and evolve a unified technical roadmap that feeds into Shape Up pitches, including items like Spark upgrades, Iceberg adoption, ML/LLM stack enhancements, and query federation.
+
+- **Design Technical Solutions**  
+  Participate in designing key systems such as CDC pipelines, ML model deployment flows, Spark-on-YARN optimizations, or security integration patterns.
+
+- **Guide and Participate in Implementation**  
+  Where possible, contribute directly to coding, Helm chart updates, infrastructure automation, or architecture prototyping—especially in high-risk or early-phase work.
+
+- **Review and Monitor Technical Progress**  
+  Run tech check-ins during build cycles, review branch progress, and ensure scopes are being completed with the expected quality and performance.
+
+- **Ensure System Reliability and Security**  
+  Own on-call policy, SLA tracking, TLS/SSO/Kerberos enforcement, and root-cause analysis of platform incidents.
+
+- **Budget and Capacity Planning**  
+  Manage infrastructure costs (GPUs, storage, HP Servers), align spending with Shape Up cycle priorities, and ensure system capacity keeps up with forecasted demand.
+
 
