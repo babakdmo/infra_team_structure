@@ -1,3 +1,16 @@
+# 📁 Repository File Overview
+
+This table lists key files in the repository and briefly explains their purpose.
+
+| File Name      | Location | Purpose |
+|----------------|----------|---------|
+| `Infra.md`     | `/` (root) | Defines the full Infrastructure org, including Storage, SRE, Core Ops, and Data Infrastructure. |
+| `Benchmark.md` | `/` (root) | Benchmarks Data Infra team models across companies like Google, Netflix, and Meta. |
+| `README.md`    | `/` (root) | Documents Data Infrastructure team structure, planning, and roadmap. |
+
+---
+---
+
 # 📚 Table of Contents
 
 1. [Data Infrastructure Team Overview](#data-infrastructure-team)
