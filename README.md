@@ -527,3 +527,117 @@ Letting the Data Infrastructure team run and tune the data platform results in:
 - Better cost control tied to data usage  
 - Fewer communication handoffs during troubleshooting  
 - Alignment with how the most effective companies run their stack
+
+---
+---
+
+# 🛠️ Data Infrastructure Team Roadmap & Operationalization Plan (12-Week Execution)
+
+This document outlines a clear and actionable two-phase, 12-week roadmap to formalize the structure, services, team operations, and stakeholder communication plan for the Data Infrastructure team. The plan is independent of hiring pace, which continues in parallel.
+
+---
+
+### Overview
+
+- Team size today: **4 engineers**
+- Team goal: Build clear subteams, assign scopes, define services, and propose internal operating model to the company
+- Hiring timeline: Every 6 weeks = 1 hire (parallel track; **not part of this operational roadmap**)
+- Execution time frame: **12 weeks**, split into **two 6-week delivery phases**
+- Your role: **Team lead and Shape Up owner**
+
+---
+
+### 🧩 Phase 1 (Weeks 1–6): Team Structure, Technical Domains, and Internal Operations
+
+##### Deliverables
+
+- **Subteam Structure Finalized**
+  - 4 subteams (2-person each):  
+    - Data Platform  
+    - Data Engineering  
+    - MLOps  
+    - BI Services
+
+- **Domain Ownership Defined**
+  - Each team mapped to its engine and stack:
+    - **Data Platform** → HDFS, YARN, Spark, Kafka, ZooKeeper, TLS, Kerberos
+    - **Data Engineering** → Airflow, CDC to Hudi/Iceberg, DataHub, Great Expectations
+    - **MLOps** → MLflow, Feature Store, Ray, Triton/Seldon, RAG infrastructure
+    - **BI Services** → dbt, Superset/Looker, Trino, StarRocks, Redis, Materialized views
+
+- **Technical Scope and Service Separation Finalized**
+  - What each subteam owns and delivers
+  - Inputs/outputs and shared boundaries between teams
+
+- **Team Management Rules Finalized**
+  - All engineers report to the single team lead
+  - Subteam leads will be introduced only when headcount in that subteam reaches 3
+
+- **Engineer Rotation Policy Finalized**
+  - Engineers rotate between subteams every 6–9 months based on interest and coverage needs
+
+- **On-Call Strategy Finalized**
+  - Rotation model: 2-deep, per subteam (starting with Platform + Engineering)
+  - Handoff process, escalation tree, and alerting channels defined
+
+---
+
+### 🧩 Phase 2 (Weeks 7–12): Stakeholder Model, Service Catalog, Company Communication
+
+##### Deliverables
+
+- **Stakeholder Groups Mapped**
+  - Each subteam defines its internal customers:
+    - Platform → SRE, Infrastructure, DevOps
+    - Data Engineering → Product data consumers, analytics
+    - MLOps → ML/DS teams
+    - BI Services → Business units, product managers
+
+- **Service Catalog Finalized**
+  - For each subteam:
+    - What services we offer (pipelines, dashboarding, serving, feature store, etc.)
+    - SLAs, contact models, and escalation paths
+    - Ownership mapping: who maintains what and how requests are processed
+
+- **Stakeholder Interaction Plan Finalized**
+  - Structured communication flows with each group
+  - Weekly or bi-weekly syncs with key stakeholder groups
+  - Feedback and intake channels documented (e.g., tickets, Slack, Confluence)
+
+- **On-Call Publication**
+  - Company-wide visibility of:
+    - Who is on call
+    - How to page the data team
+    - What kinds of problems we handle
+    - Link to escalation process and runbooks
+
+- **Company-Wide Announcement**
+  - Team structure
+  - Subteam responsibilities
+  - Service catalog and stakeholder communication plan
+  - How to request support or escalate
+
+---
+
+### Continual Tasks (Parallel & Ongoing)
+
+- Shape Up cycles:
+  - 6-week build, 2-week cool-down
+  - Team lead owns pitch coordination and delivery rhythm
+
+- Continuous Hiring:
+  - Ongoing hiring continues in parallel every 6 weeks (up to 8 FTEs by year-end)
+  - New engineers assigned to subteams based on scope needs
+
+- Review Checkpoints:
+  - Internal sync every 3 weeks for tracking adoption, coverage, and incident handling
+
+---
+
+### Final Outcome (End of Week 12)
+
+- Complete 4-domain team design
+- Defined services and scopes per team
+- Published internal and external service structure
+- Stakeholder-ready team with on-call coverage
+- Growing hiring track decoupled from operational maturity
