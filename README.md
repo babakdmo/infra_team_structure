@@ -11,7 +11,7 @@ This table lists key files in the repository and briefly explains their purpose.
 ---
 ---
 
-# 📚 Table of Contents
+# 📚 Table of Readme Contents
 
 1. [Data Infrastructure Team Overview](#data-infrastructure-team)
 2. [Team Structure Overview](#team-structure-overview)
