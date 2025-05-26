@@ -419,8 +419,8 @@ This structure shows how an 8-person data infrastructure team is organized under
 ```
                          Data Infrastructure Lead
                                   │
-        ┌──────────────┬──────────────┬──────────────┐
-        ▼              ▼              ▼              ▼
+        ┌──────────────┬────────────────┬──────────────┐
+        ▼              ▼                ▼              ▼
 Data Platform    Data Engineering     MLOps        BI Services
      Team             Team             Team            Team
      │                 │                │               │
