@@ -498,4 +498,36 @@ Eng 1   Eng 2     Eng 3   Eng 4    Eng 5   Eng 6   Eng 7   Eng 8
 - **Budget and Capacity Planning**  
   - Manage infrastructure costs (GPUs, storage, HP Servers), align spending with Shape Up cycle priorities, and ensure system capacity keeps up with forecasted demand.
 
+---
+---
 
+# ✅ Why the Data Team—Not DevOps—Should Own the Data Platform
+
+This document summarizes the key reasons your data infrastructure team—not general DevOps—should run the data platform.
+
+---
+
+## 📌 Key Reasons for Data Platform Ownership
+
+| # | Core Reason | How It Works in Practice |
+|---|-------------|---------------------------|
+| 1 | Business and goal alignment | Data SLAs (like dashboard speed or freshness) aren’t infrastructure metrics; data team understands both the intent and the knobs |
+| 2 | Workload-aware tuning | Data engineers understand query shapes and can adjust Spark/Presto/Pinot accordingly |
+| 3 | Faster innovation and upgrades | DevOps typically works on quarterly cycles; data teams release every sprint |
+| 4 | Privacy and compliance ownership | Regulations like GDPR require row-level delete logic built into pipelines |
+| 5 | Cost optimization and cleanup | Data teams can trace costs to jobs, tables, and query plans—not just VMs or clusters |
+| 6 | End-to-end incident resolution | Data Infra can fix issues from logic to infra, while Ops often only sees hardware-level symptoms |
+| 7 | Better support interactions | Vendors need both logs and pipeline context; Data Infra can give both at once |
+| 8 | Proven industry pattern | Top companies keep data platform under data team, not DevOps |
+
+---
+
+## ✅ Summary
+
+Letting the Data Infrastructure team run the platform results in:
+
+- Better alignment with business goals  
+- More performance and cost control  
+- Faster fixes and software updates  
+- Easier compliance with privacy regulations  
+- Industry-proven best practices
