@@ -372,25 +372,25 @@ Data Infrastructure Team
 ###  Benefits of Creating Focused Subteams
 
 - **Clear Responsibilities = Faster Problem Resolution**  
-  Each subteam owns a specific area (like platform infrastructure, ML, pipelines, or BI). When something goes wrong, it’s clear who handles it—no delays or confusion.
+  - Each subteam owns a specific area (like platform infrastructure, ML, pipelines, or BI). When something goes wrong, it’s clear who handles it, no delays or confusion.
 
 - **Focused Expertise with Built-in Collaboration**  
-  Engineers can specialize in one domain and develop deep skills, while working closely with a teammate to share context and knowledge.
+  - Engineers can specialize in one domain and develop deep skills, while working closely with a teammate to share context and knowledge.
 
 - **Multiple Projects Move Forward at the Same Time**  
-  Different subteams can work on different priorities without getting in each other’s way—like fixing Spark configs while also launching a new Superset dashboard.
+  - Different subteams can work on different priorities without getting in each other’s way—like fixing Spark configs while also launching a new Superset dashboard.
 
 - **Structured Mentoring and Career Growth**  
-  Pairing a less experienced engineer with a more experienced one makes it easier to learn and grow—without needing formal managers for each subteam.
+  - Pairing a less experienced engineer with a more experienced one makes it easier to learn and grow—without needing formal managers for each subteam.
 
 - **Better Resilience to Leave or Turnover**  
-  If someone takes vacation or leaves, their teammate can continue the work. The rest of the team stays productive and unaffected.
+  - If someone takes vacation or leaves, their teammate can continue the work. The rest of the team stays productive and unaffected.
 
 - **Flexible and Easy to Grow**  
-  As your team expands, you can add people into each subteam without needing to change how the whole team is organized.
+  - As your team expands, you can add people into each subteam without needing to change how the whole team is organized.
 
 - **Supports Future Business Needs**  
-  If your company later offers parts of the data platform (ML, BI, pipelines) as services to other teams or clients, these subteams already match those service boundaries.
+  - If your company later offers parts of the data platform (ML, BI, pipelines) as services to other teams or clients, these subteams already match those service boundaries.
 
 ---
 
@@ -453,49 +453,49 @@ Eng 1   Eng 2     Eng 3   Eng 4    Eng 5   Eng 6   Eng 7   Eng 8
 ### Responsibilities of the Data Infrastructure Lead
 ---
 
-##### Organizational Leadership
+#### Organizational Leadership
 
 - **Performance Management**  
-  Conduct regular 1:1s, track individual contributions, and manage performance reviews using clear and consistent evaluation criteria.
+  - Conduct regular 1:1s, track individual contributions, and manage performance reviews using clear and consistent evaluation criteria.
 
 - **Shape Up Process Ownership**  
-  Own and lead the Shape Up process within the team—define appetites, pitch high-leverage projects, and guide cycle planning. Ensure pitches are technically feasible and strategically aligned.
+  - Own and lead the Shape Up process within the team—define appetites, pitch high-leverage projects, and guide cycle planning. Ensure pitches are technically feasible and strategically aligned.
 
 - **Mentorship & Career Growth**  
-  Actively support engineers’ professional development through structured growth plans, skill mapping, and feedback loops.
+  - Actively support engineers’ professional development through structured growth plans, skill mapping, and feedback loops.
 
 - **Conflict Resolution**  
-  Resolve prioritization or ownership disputes and ensure collaboration across all subteams stays constructive and timely.
+  - Resolve prioritization or ownership disputes and ensure collaboration across all subteams stays constructive and timely.
 
 - **Cross-Team and Stakeholder Communication**  
-  Act as the main point of contact between the data infrastructure team and other internal teams. Maintain visibility and transparency of work progress, timelines, and delivery risks.
+  - Act as the main point of contact between the data infrastructure team and other internal teams. Maintain visibility and transparency of work progress, timelines, and delivery risks.
 
 - **On-Call Ownership and Escalation**  
-  Define and manage the on-call rotation, escalation policy, and post-incident review process. Ensure 24/7 coverage across critical systems and coordinate timely resolution of Sev-1 incidents.
+  - Define and manage the on-call rotation, escalation policy, and post-incident review process. Ensure 24/7 coverage across critical systems and coordinate timely resolution of Sev-1 incidents.
 
 ---
 
-##### Technical Leadership
+#### Technical Leadership
 
 - **Architecture Design & Approval**  
-  Lead the design of major components such as secure data lakes, streaming pipelines, ML infra, and analytics stack integrations. Approve proposals and enforce architectural standards.
+  - Lead the design of major components such as secure data lakes, streaming pipelines, ML infra, and analytics stack integrations. Approve proposals and enforce architectural standards.
 
 - **Technical Roadmap Ownership**  
-  Maintain and evolve a unified technical roadmap that feeds into Shape Up pitches, including items like Spark upgrades, Iceberg adoption, ML/LLM stack enhancements, and query federation.
+  - Maintain and evolve a unified technical roadmap that feeds into Shape Up pitches, including items like Spark upgrades, Iceberg adoption, ML/LLM stack enhancements, and query federation.
 
 - **Design Technical Solutions**  
-  Participate in designing key systems such as CDC pipelines, ML model deployment flows, Spark-on-YARN optimizations, or security integration patterns.
+  - Participate in designing key systems such as CDC pipelines, ML model deployment flows, Spark-on-YARN optimizations, or security integration patterns.
 
 - **Guide and Participate in Implementation**  
-  Where possible, contribute directly to coding, Helm chart updates, infrastructure automation, or architecture prototyping—especially in high-risk or early-phase work.
+  - Where possible, contribute directly to coding, Helm chart updates, infrastructure automation, or architecture prototyping—especially in high-risk or early-phase work.
 
 - **Review and Monitor Technical Progress**  
-  Run tech check-ins during build cycles, review branch progress, and ensure scopes are being completed with the expected quality and performance.
+  - Run tech check-ins during build cycles, review branch progress, and ensure scopes are being completed with the expected quality and performance.
 
 - **Ensure System Reliability and Security**  
-  Own on-call policy, SLA tracking, TLS/SSO/Kerberos enforcement, and root-cause analysis of platform incidents.
+  - Own on-call policy, SLA tracking, TLS/SSO/Kerberos enforcement, and root-cause analysis of platform incidents.
 
 - **Budget and Capacity Planning**  
-  Manage infrastructure costs (GPUs, storage, HP Servers), align spending with Shape Up cycle priorities, and ensure system capacity keeps up with forecasted demand.
+  - Manage infrastructure costs (GPUs, storage, HP Servers), align spending with Shape Up cycle priorities, and ensure system capacity keeps up with forecasted demand.
 
 
