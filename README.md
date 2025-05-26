@@ -1,3 +1,22 @@
+# 📚 Table of Contents
+
+1. [Data Infrastructure Team Overview](#data-infrastructure-team)
+2. [Team Structure Overview](#team-structure-overview)
+3. [1- Data Platform Team](#1--data-platform-team)
+4. [2- Data Engineering Team](#2--data-engineering-team)
+5. [3- MLOps Team](#3--mlops-team)
+6. [4- BI Services Team (Infra-Level)](#4--bi-services-team-infra-level)
+7. [Why Organizing into Four 2-Person Subteams Works Better](#-why-organizing-into-four-2-person-subteams-works-better)
+8. [Leadership Structure](#-leadership-structure)
+    - [Team Structure](#team-structure)
+    - [Leadership Rules](#leadership-rules)
+    - [Responsibilities of the Data Infrastructure Lead](#responsibilities-of-the-data-infrastructure-lead)
+9. [Why the Data Team—Not DevOps—Should Own the Data Platform](#-why-the-data-teamnot-devopsshould-own-the-data-platform)
+10. [Data Infrastructure Team Roadmap & Operationalization Plan (12-Week Execution)](#-data-infrastructure-team-roadmap--operationalization-plan-12-week-execution)
+    - [Phase 1: Team Structure, Technical Domains, and Internal Operations](#-phase-1-weeks-16-team-structure-technical-domains-and-internal-operations)
+    - [Phase 2: Stakeholder Model, Service Catalog, Company Communication](#-phase-2-weeks-7-12-stakeholder-model-service-catalog-company-communication)
+    - [Continual Tasks](#continual-tasks-parallel--ongoing)
+    - [Final Outcome](#final-outcome-end-of-week-12)
 # **Data Infrastructure Team**
 
 ## Team Structure Overview
