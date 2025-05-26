@@ -1,3 +1,5 @@
+![Team Structure Diagram](DataInfraDiagram.png)
+
 # 📁 Repository File Overview
 
 This table lists key files in the repository and briefly explains their purpose.
