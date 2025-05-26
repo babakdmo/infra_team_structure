@@ -409,7 +409,7 @@ This structure creates a clear, resilient, and scalable team that delivers more�
 ---
 ---
 
-# 🌳 Data Infrastructure Team Structure
+# 🌳 Leadership Structure
 
 This structure shows how an 8-person data infrastructure team is organized under a single team lead, with four specialized subteams. Each subteam currently has two members and operates without a designated subteam lead.
 
