@@ -503,8 +503,6 @@ Eng 1   Eng 2     Eng 3   Eng 4    Eng 5   Eng 6   Eng 7   Eng 8
 
 # ✅ Why the Data Team—Not DevOps—Should Own the Data Platform
 
-This document summarizes the key reasons your data infrastructure team—not general DevOps—should run the data platform.
-
 ---
 
 ## 📌 Key Reasons for Data Platform Ownership
